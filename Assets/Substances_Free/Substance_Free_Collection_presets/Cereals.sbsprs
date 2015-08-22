@@ -1,0 +1,36 @@
+<sbspresets formatversion="1.0" count="3" >
+ <sbspreset pkgurl="pkg://Cereals/Cereals" label="var01" >
+  <presetinput identifier="Emboss" uid="2583700377" type="0" value="5.762" />
+  <presetinput identifier="Light_Angle" uid="2583700389" type="0" value="0.097" />
+  <presetinput identifier="Contrast" uid="2583768482" type="0" value="0.152" />
+  <presetinput identifier="Saturation" uid="2592431540" type="0" value="0.543" />
+  <presetinput identifier="Luminosity" uid="2592431543" type="0" value="0.423" />
+  <presetinput identifier="$outputsize" uid="2658640000" type="8" value="10,10" />
+  <presetinput identifier="$randomseed" uid="3372594898" type="4" value="-968057035" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Cereals/Cereals" label="var02" >
+  <presetinput identifier="Emboss" uid="2583700377" type="0" value="5.762" />
+  <presetinput identifier="Light_Angle" uid="2583700389" type="0" value="0.122" />
+  <presetinput identifier="Contrast" uid="2583768482" type="0" value="0.152" />
+  <presetinput identifier="Depth" uid="2584223578" type="0" value="0.412" />
+  <presetinput identifier="Saturation" uid="2592431540" type="0" value="0.543" />
+  <presetinput identifier="Luminosity" uid="2592431543" type="0" value="0.423" />
+  <presetinput identifier="Milk_Level" uid="2612442444" type="0" value="0.196" />
+  <presetinput identifier="Colour_Variation" uid="2612873744" type="0" value="0.33" />
+  <presetinput identifier="$outputsize" uid="2658640000" type="8" value="10,10" />
+  <presetinput identifier="$randomseed" uid="3372594898" type="4" value="-968057035" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Cereals/Cereals" label="var03" >
+  <presetinput identifier="Emboss" uid="2583700377" type="0" value="5.762" />
+  <presetinput identifier="Light_Angle" uid="2583700389" type="0" value="0.122" />
+  <presetinput identifier="Contrast" uid="2583768482" type="0" value="0.152" />
+  <presetinput identifier="Depth" uid="2584223578" type="0" value="0.412" />
+  <presetinput identifier="Saturation" uid="2592431540" type="0" value="0.543" />
+  <presetinput identifier="Luminosity" uid="2592431543" type="0" value="0.423" />
+  <presetinput identifier="Milk_Level" uid="2612442444" type="0" value="0.407" />
+  <presetinput identifier="Colour_Variation" uid="2612873744" type="0" value="0.412" />
+  <presetinput identifier="Cereal_Type" uid="2612874415" type="4" value="1" />
+  <presetinput identifier="$outputsize" uid="2658640000" type="8" value="10,10" />
+  <presetinput identifier="$randomseed" uid="3372594898" type="4" value="-1758347690" />
+ </sbspreset>
+</sbspresets>

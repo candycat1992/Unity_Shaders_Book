@@ -1,0 +1,20 @@
+<sbspresets formatversion="1.0" count="2" >
+ <sbspreset pkgurl="pkg://Pavement_Path/Pavement_Path" label="var01" >
+  <presetinput identifier="$randomseed" uid="536806035" type="4" value="-726862613" />
+  <presetinput identifier="$outputsize" uid="1217205441" type="8" value="9,9" />
+  <presetinput identifier="Saturation" uid="1277899514" type="0" value="0.446" />
+  <presetinput identifier="Age" uid="1278582043" type="0" value="0.675" />
+  <presetinput identifier="Moss" uid="1285304159" type="0" value="1" />
+  <presetinput identifier="Sharpen" uid="1287168943" type="0" value="1" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Pavement_Path/Pavement_Path" label="var02" >
+  <presetinput identifier="$randomseed" uid="536806035" type="4" value="-930421100" />
+  <presetinput identifier="$outputsize" uid="1217205441" type="8" value="9,9" />
+  <presetinput identifier="Hue_Shift" uid="1277899513" type="0" value="0.099" />
+  <presetinput identifier="Saturation" uid="1277899514" type="0" value="0.446" />
+  <presetinput identifier="Normal" uid="1278579163" type="0" value="1" />
+  <presetinput identifier="Depth" uid="1285112168" type="0" value="1" />
+  <presetinput identifier="Moss" uid="1285304159" type="0" value="1" />
+  <presetinput identifier="Sharpen" uid="1287168943" type="0" value="1" />
+ </sbspreset>
+</sbspresets>

@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: 3a8a1d3d1f9b749f6a5976e29de6e354
+timeCreated: 1437898996
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: ankle_L
+    100002: ankle_R
+    100004: ArbitraryChain4_plc4
+    100006: ArbitraryChain5_plc5
+    100008: ArbitraryChain6_plc6
+    100010: bicep_L
+    100012: bicep_R
+    100014: clavicle_L
+    100016: clavicle_R
+    100018: elbow_L
+    100020: elbow_R
+    100022: forearmTwist_L
+    100024: forearmTwist_R
+    100026: frontBag0_0
+    100028: head
+    100030: head1
+    100032: igniteParticle6_0
+    100034: Index_0_L
+    100036: Index_0_R
+    100038: Index_1_L
+    100040: Index_1_R
+    100042: Jaw
+    100044: Jaw1
+    100046: knee_L
+    100048: knee_R
+    100050: low_belt1
+    100052: Mid_0_L
+    100054: Mid_0_R
+    100056: Mid_1_L
+    100058: Mid_1_R
+    100060: neck1
+    100062: neck11
+    100064: //RootNode
+    100066: racoonTail4_0
+    100068: racoonTail4_1
+    100070: Ring_0_L
+    100072: Ring_0_R
+    100074: Ring_1_L
+    100076: Ring_1_R
+    100078: root
+    100080: shawl5_0
+    100082: spine1
+    100084: spine2
+    100086: thigh_L
+    100088: thigh_R
+    100090: Thumb_0_L
+    100092: Thumb_0_R
+    100094: Thumb_1_L
+    100096: Thumb_1_R
+    100098: toeBase_L
+    100100: toeBase_R
+    100102: topKnot2_0
+    100104: weapon3_0
+    100106: wrist_L
+    100108: wrist_R
+    400000: ankle_L
+    400002: ankle_R
+    400004: ArbitraryChain4_plc4
+    400006: ArbitraryChain5_plc5
+    400008: ArbitraryChain6_plc6
+    400010: bicep_L
+    400012: bicep_R
+    400014: clavicle_L
+    400016: clavicle_R
+    400018: elbow_L
+    400020: elbow_R
+    400022: forearmTwist_L
+    400024: forearmTwist_R
+    400026: frontBag0_0
+    400028: head
+    400030: head1
+    400032: igniteParticle6_0
+    400034: Index_0_L
+    400036: Index_0_R
+    400038: Index_1_L
+    400040: Index_1_R
+    400042: Jaw
+    400044: Jaw1
+    400046: knee_L
+    400048: knee_R
+    400050: low_belt1
+    400052: Mid_0_L
+    400054: Mid_0_R
+    400056: Mid_1_L
+    400058: Mid_1_R
+    400060: neck1
+    400062: neck11
+    400064: //RootNode
+    400066: racoonTail4_0
+    400068: racoonTail4_1
+    400070: Ring_0_L
+    400072: Ring_0_R
+    400074: Ring_1_L
+    400076: Ring_1_R
+    400078: root
+    400080: shawl5_0
+    400082: spine1
+    400084: spine2
+    400086: thigh_L
+    400088: thigh_R
+    400090: Thumb_0_L
+    400092: Thumb_0_R
+    400094: Thumb_1_L
+    400096: Thumb_1_R
+    400098: toeBase_L
+    400100: toeBase_R
+    400102: topKnot2_0
+    400104: weapon3_0
+    400106: wrist_L
+    400108: wrist_R
+    4300000: low_belt1
+    9500000: //RootNode
+    13700000: low_belt1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

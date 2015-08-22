@@ -1,0 +1,16 @@
+<sbspresets formatversion="1.0" count="2" >
+ <sbspreset pkgurl="pkg://Wood_Planks_01/Wood_Planks_01" label="var01" >
+  <presetinput identifier="Boards" uid="724742374" type="4" value="8" />
+  <presetinput identifier="Wood_Grain" uid="731471299" type="0" value="0.441" />
+  <presetinput identifier="Sharpen" uid="733756347" type="0" value="0" />
+  <presetinput identifier="$outputsize" uid="797587772" type="8" value="9,9" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Wood_Planks_01/Wood_Planks_01" label="var02" >
+  <presetinput identifier="Saturation" uid="724311815" type="0" value="0.517" />
+  <presetinput identifier="Boards" uid="724742374" type="4" value="4" />
+  <presetinput identifier="Wood_Grain" uid="731471299" type="0" value="0" />
+  <presetinput identifier="Angle" uid="731802146" type="0" value="0.236" />
+  <presetinput identifier="Sharpen" uid="733756347" type="0" value="1" />
+  <presetinput identifier="$outputsize" uid="797587772" type="8" value="9,9" />
+ </sbspreset>
+</sbspresets>

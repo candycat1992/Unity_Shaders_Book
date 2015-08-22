@@ -1,0 +1,32 @@
+<sbspresets formatversion="1.0" count="4" >
+ <sbspreset pkgurl="pkg://Electric_Liquid/Electric_Liquid" label="var01" >
+  <presetinput identifier="$outputsize" uid="694699089" type="8" value="9,9" />
+  <presetinput identifier="Flow" uid="748611366" type="0" value="351.562" />
+  <presetinput identifier="Glow_Intensity" uid="754481806" type="0" value="0.35" />
+  <presetinput identifier="Glow_Size" uid="754481913" type="0" value="3.149" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Electric_Liquid/Electric_Liquid" label="var02" >
+  <presetinput identifier="$outputsize" uid="694699089" type="8" value="9,9" />
+  <presetinput identifier="Flow" uid="748611366" type="0" value="351.562" />
+  <presetinput identifier="Glow_Intensity" uid="754481806" type="0" value="0.35" />
+  <presetinput identifier="Glow_Size" uid="754481913" type="0" value="0" />
+  <presetinput identifier="Liquid_Color" uid="1404575099" type="2" value="0.318,0.741,0.439" />
+  <presetinput identifier="$randomseed" uid="2115654147" type="4" value="-1708597500" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Electric_Liquid/Electric_Liquid" label="var03" >
+  <presetinput identifier="$outputsize" uid="694699089" type="8" value="9,9" />
+  <presetinput identifier="Flow" uid="748611366" type="0" value="351.562" />
+  <presetinput identifier="Glow_Intensity" uid="754481806" type="0" value="0.83" />
+  <presetinput identifier="Glow_Size" uid="754481913" type="0" value="0" />
+  <presetinput identifier="Liquid_Color" uid="1404575099" type="2" value="0.471,0.741,0.741" />
+  <presetinput identifier="$randomseed" uid="2115654147" type="4" value="-1466697349" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Electric_Liquid/Electric_Liquid" label="var04" >
+  <presetinput identifier="$outputsize" uid="694699089" type="8" value="9,9" />
+  <presetinput identifier="Flow" uid="748611366" type="0" value="351.562" />
+  <presetinput identifier="Glow_Intensity" uid="754481806" type="0" value="0.411" />
+  <presetinput identifier="Glow_Size" uid="754481913" type="0" value="5" />
+  <presetinput identifier="Liquid_Color" uid="1404575099" type="2" value="0.373,0.125,0.741" />
+  <presetinput identifier="$randomseed" uid="2115654147" type="4" value="700204438" />
+ </sbspreset>
+</sbspresets>

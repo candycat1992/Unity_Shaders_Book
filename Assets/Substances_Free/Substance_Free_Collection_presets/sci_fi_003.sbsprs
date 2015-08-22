@@ -1,0 +1,30 @@
+<sbspresets formatversion="1.0" count="2" >
+ <sbspreset pkgurl="pkg://sci_fi_003/sci_fi_003" label="var02" >
+  <presetinput identifier="$outputsize" uid="671736550" type="8" value="9,9" />
+  <presetinput identifier="Luminosity" uid="760568669" type="0" value="0.517" />
+  <presetinput identifier="Contrast" uid="1391914964" type="0" value="0.062" />
+  <presetinput identifier="Middle_Color" uid="1392098443" type="2" value="0.392,0.396,0.439" />
+  <presetinput identifier="Side_Color" uid="1392098444" type="2" value="0.565,0.431,0.09" />
+  <presetinput identifier="Color_01" uid="1392114697" type="2" value="0.333,0.349,0.404" />
+  <presetinput identifier="Patterns_02_Size" uid="1392144081" type="0" value="1" />
+  <presetinput identifier="Patterns_01_Size" uid="1392147609" type="0" value="1" />
+  <presetinput identifier="Middle_Pattern_Tiling" uid="1392149859" type="4" value="6" />
+  <presetinput identifier="Age" uid="1392237258" type="0" value="0" />
+  <presetinput identifier="Patterns_01_Type" uid="1392322918" type="4" value="5" />
+  <presetinput identifier="Patterns_02_Type" uid="1392352113" type="4" value="4" />
+  <presetinput identifier="$randomseed" uid="2138830004" type="4" value="-2134780327" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://sci_fi_003/sci_fi_003" label="var01" >
+  <presetinput identifier="$outputsize" uid="671736550" type="8" value="9,9" />
+  <presetinput identifier="Middle_Color" uid="1392098443" type="2" value="1,0.796,0.675" />
+  <presetinput identifier="Side_Color" uid="1392098444" type="2" value="0.322,0.357,0.325" />
+  <presetinput identifier="Color_01" uid="1392114697" type="2" value="0.365,0.404,0.357" />
+  <presetinput identifier="Patterns_02_Size" uid="1392144081" type="0" value="0.859" />
+  <presetinput identifier="Patterns_01_Size" uid="1392147609" type="0" value="0.97" />
+  <presetinput identifier="Middle_Pattern_Tiling" uid="1392149859" type="4" value="1" />
+  <presetinput identifier="Age" uid="1392237258" type="0" value="0.7" />
+  <presetinput identifier="Patterns_01_Type" uid="1392322918" type="4" value="1" />
+  <presetinput identifier="Patterns_02_Type" uid="1392352113" type="4" value="4" />
+  <presetinput identifier="$randomseed" uid="2138830004" type="4" value="-1636702523" />
+ </sbspreset>
+</sbspresets>

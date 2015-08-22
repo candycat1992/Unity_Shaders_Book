@@ -1,0 +1,28 @@
+<sbspresets formatversion="1.0" count="3" >
+ <sbspreset pkgurl="pkg://Pavement_01/Pavement_01" label="var01" >
+  <presetinput identifier="$randomseed" uid="451964390" type="4" value="1229596684" />
+  <presetinput identifier="Colour_Variation" uid="1238384853" type="0" value="1" />
+  <presetinput identifier="Contrast" uid="1240854071" type="0" value="-0.201" />
+  <presetinput identifier="Saturation" uid="1240854088" type="0" value="0.287" />
+  <presetinput identifier="$outputsize" uid="1300396980" type="8" value="10,10" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Pavement_01/Pavement_01" label="var02" >
+  <presetinput identifier="$randomseed" uid="451964390" type="4" value="1055192252" />
+  <presetinput identifier="Colour_Variation" uid="1238384853" type="0" value="0.473" />
+  <presetinput identifier="Age" uid="1239018129" type="0" value="0.738" />
+  <presetinput identifier="Contrast" uid="1240854071" type="0" value="0.027" />
+  <presetinput identifier="Saturation" uid="1240854088" type="0" value="0.499" />
+  <presetinput identifier="$outputsize" uid="1300396980" type="8" value="10,10" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Pavement_01/Pavement_01" label="var03" >
+  <presetinput identifier="$randomseed" uid="451964390" type="4" value="1826191471" />
+  <presetinput identifier="Colour_Variation" uid="1238384853" type="0" value="0.473" />
+  <presetinput identifier="Wavelets" uid="1238921421" type="0" value="0.096" />
+  <presetinput identifier="Water_Level" uid="1238997677" type="0" value="0.604" />
+  <presetinput identifier="Age" uid="1239018129" type="0" value="0.449" />
+  <presetinput identifier="Depth" uid="1240854053" type="0" value="0.586" />
+  <presetinput identifier="Contrast" uid="1240854071" type="0" value="-0.027" />
+  <presetinput identifier="Saturation" uid="1240854088" type="0" value="0.499" />
+  <presetinput identifier="$outputsize" uid="1300396980" type="8" value="10,10" />
+ </sbspreset>
+</sbspresets>

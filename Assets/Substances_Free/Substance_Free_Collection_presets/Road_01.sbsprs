@@ -1,0 +1,13 @@
+<sbspresets formatversion="1.0" count="1" >
+ <sbspreset pkgurl="pkg://Road_01/Road_01" label="var01" >
+  <presetinput identifier="$randomseed" uid="41174941" type="4" value="-1675998009" />
+  <presetinput identifier="Lines_Shape" uid="1364732453" type="0" value="1" />
+  <presetinput identifier="Contrast" uid="1367306980" type="0" value="0.154" />
+  <presetinput identifier="Normal" uid="1367307002" type="0" value="0.49" />
+  <presetinput identifier="Lines_Lum" uid="1374976468" type="0" value="0.408" />
+  <presetinput identifier="Lines_Sat" uid="1374976470" type="0" value="1" />
+  <presetinput identifier="Lines_Hue" uid="1374976472" type="0" value="1" />
+  <presetinput identifier="Border_Size" uid="1380461678" type="0" value="24.023" />
+  <presetinput identifier="$outputsize" uid="1426477519" type="8" value="9,9" />
+ </sbspreset>
+</sbspresets>

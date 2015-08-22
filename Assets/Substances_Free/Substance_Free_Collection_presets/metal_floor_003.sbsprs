@@ -1,0 +1,35 @@
+<sbspresets formatversion="1.0" count="3" >
+ <sbspreset pkgurl="pkg://metal_floor_003/metal_floor_003" label="var01" >
+  <presetinput identifier="$outputsize" uid="3001828959" type="8" value="9,9" />
+  <presetinput identifier="Luminosity" uid="3081830372" type="0" value="0.527" />
+  <presetinput identifier="Normal" uid="3081830533" type="0" value="0.584" />
+  <presetinput identifier="Emboss" uid="3081830618" type="0" value="0.45" />
+  <presetinput identifier="Patterns_Scale" uid="3086273871" type="4" value="2" />
+  <presetinput identifier="Contrast" uid="3356715931" type="0" value="0.062" />
+  <presetinput identifier="$randomseed" uid="3852357645" type="4" value="1461247237" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://metal_floor_003/metal_floor_003" label="var02" >
+  <presetinput identifier="$outputsize" uid="3001828959" type="8" value="9,9" />
+  <presetinput identifier="Luminosity" uid="3081830372" type="0" value="0.527" />
+  <presetinput identifier="Normal" uid="3081830533" type="0" value="0.584" />
+  <presetinput identifier="Emboss" uid="3081830618" type="0" value="0.45" />
+  <presetinput identifier="Patterns_Scale" uid="3086273871" type="4" value="9" />
+  <presetinput identifier="Rust_leaks" uid="3356697076" type="0" value="0.354" />
+  <presetinput identifier="Drips_Angle" uid="3356697077" type="0" value="0.578" />
+  <presetinput identifier="Age" uid="3356715789" type="0" value="0.493" />
+  <presetinput identifier="Contrast" uid="3356715931" type="0" value="0.062" />
+  <presetinput identifier="$randomseed" uid="3852357645" type="4" value="1461247237" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://metal_floor_003/metal_floor_003" label="var03" >
+  <presetinput identifier="$outputsize" uid="3001828959" type="8" value="9,9" />
+  <presetinput identifier="Luminosity" uid="3081830372" type="0" value="0.527" />
+  <presetinput identifier="Normal" uid="3081830533" type="0" value="0.584" />
+  <presetinput identifier="Emboss" uid="3081830618" type="0" value="0.45" />
+  <presetinput identifier="Patterns_Scale" uid="3086273871" type="4" value="10" />
+  <presetinput identifier="Rust_leaks" uid="3356697076" type="0" value="0.627" />
+  <presetinput identifier="Drips_Angle" uid="3356697077" type="0" value="0.008" />
+  <presetinput identifier="Age" uid="3356715789" type="0" value="0.983" />
+  <presetinput identifier="Contrast" uid="3356715931" type="0" value="0.062" />
+  <presetinput identifier="$randomseed" uid="3852357645" type="4" value="-93219257" />
+ </sbspreset>
+</sbspresets>

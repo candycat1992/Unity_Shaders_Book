@@ -1,0 +1,33 @@
+<sbspresets formatversion="1.0" count="3" >
+ <sbspreset pkgurl="pkg://BrickWall_02/BrickWall_02" label="var02" >
+  <presetinput identifier="$randomseed" uid="837365506" type="4" value="-801489055" />
+  <presetinput identifier="Hue_Shift" uid="1651098722" type="0" value="0.019" />
+  <presetinput identifier="Saturation" uid="1651098724" type="0" value="0.521" />
+  <presetinput identifier="Emboss" uid="1659681353" type="0" value="-0.742" />
+  <presetinput identifier="Angle" uid="1659681397" type="0" value="0.297" />
+  <presetinput identifier="$outputsize" uid="1721448784" type="8" value="10,10" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://BrickWall_02/BrickWall_02" label="var01" >
+  <presetinput identifier="$randomseed" uid="837365506" type="4" value="-801489055" />
+  <presetinput identifier="Hue_Shift" uid="1651098722" type="0" value="0.019" />
+  <presetinput identifier="Saturation" uid="1651098724" type="0" value="0.521" />
+  <presetinput identifier="Bricks_X" uid="1653029189" type="4" value="19" />
+  <presetinput identifier="Emboss" uid="1659681353" type="0" value="-0.742" />
+  <presetinput identifier="Angle" uid="1659681397" type="0" value="0.614" />
+  <presetinput identifier="Age" uid="1659747218" type="0" value="0.733" />
+  <presetinput identifier="$outputsize" uid="1721448784" type="8" value="10,10" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://BrickWall_02/BrickWall_02" label="var03" >
+  <presetinput identifier="$randomseed" uid="837365506" type="4" value="-801489055" />
+  <presetinput identifier="Hue_Shift" uid="1651098722" type="0" value="0.952" />
+  <presetinput identifier="Saturation" uid="1651098724" type="0" value="0.521" />
+  <presetinput identifier="Bricks_X" uid="1653029189" type="4" value="26" />
+  <presetinput identifier="Bricks_Y" uid="1653029219" type="4" value="34" />
+  <presetinput identifier="Emboss" uid="1659681353" type="0" value="5.84" />
+  <presetinput identifier="Angle" uid="1659681397" type="0" value="0.764" />
+  <presetinput identifier="Contrast" uid="1659745394" type="0" value="-0.111" />
+  <presetinput identifier="Normal" uid="1659745552" type="0" value="0.935" />
+  <presetinput identifier="Age" uid="1659747218" type="0" value="0.733" />
+  <presetinput identifier="$outputsize" uid="1721448784" type="8" value="10,10" />
+ </sbspreset>
+</sbspresets>

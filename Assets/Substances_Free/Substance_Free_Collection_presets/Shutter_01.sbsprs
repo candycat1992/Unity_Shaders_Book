@@ -1,0 +1,17 @@
+<sbspresets formatversion="1.0" count="2" >
+ <sbspreset pkgurl="pkg://Shutter_01/Shutter_01" label="var01" >
+  <presetinput identifier="Panels_Tiling" uid="2720279196" type="4" value="7" />
+  <presetinput identifier="Metal_Or_Wood" uid="2720420630" type="4" value="1" />
+  <presetinput identifier="Border" uid="2720482964" type="4" value="0" />
+  <presetinput identifier="$outputsize" uid="2815070105" type="8" value="9,9" />
+  <presetinput identifier="Shutter_Color" uid="3709149470" type="2" value="0.996,0.996,0.996" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Shutter_01/Shutter_01" label="var02" >
+  <presetinput identifier="Aperture" uid="2720279195" type="0" value="0.606" />
+  <presetinput identifier="Panels_Tiling" uid="2720279196" type="4" value="8" />
+  <presetinput identifier="Metal_Or_Wood" uid="2720420630" type="4" value="1" />
+  <presetinput identifier="Emboss" uid="2747075712" type="0" value="9.258" />
+  <presetinput identifier="$outputsize" uid="2815070105" type="8" value="9,9" />
+  <presetinput identifier="Shutter_Color" uid="3709149470" type="2" value="0.541,0.271,0.078" />
+ </sbspreset>
+</sbspresets>

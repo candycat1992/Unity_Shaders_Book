@@ -1,0 +1,24 @@
+<sbspresets formatversion="1.0" count="2" >
+ <sbspreset pkgurl="pkg://Camouflage_02/Camouflage_02" label="var01" >
+  <presetinput identifier="$outputsize" uid="2436344417" type="8" value="10,10" />
+  <presetinput identifier="Normal" uid="2500531625" type="0" value="0.512" />
+  <presetinput identifier="Depth" uid="2500531627" type="0" value="-0.996" />
+  <presetinput identifier="Contrast" uid="2500531780" type="0" value="0.018" />
+  <presetinput identifier="Light_Angle" uid="2500532004" type="0" value="0.108" />
+  <presetinput identifier="Hue_Shift" uid="2500532007" type="0" value="0.186" />
+  <presetinput identifier="Luminosity" uid="2500532009" type="0" value="0.498" />
+  <presetinput identifier="$randomseed" uid="3326458931" type="4" value="1363218278" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Camouflage_02/Camouflage_02" label="var02" >
+  <presetinput identifier="$outputsize" uid="2436344417" type="8" value="10,10" />
+  <presetinput identifier="Normal" uid="2500531625" type="0" value="0.512" />
+  <presetinput identifier="Depth" uid="2500531627" type="0" value="-0.996" />
+  <presetinput identifier="Contrast" uid="2500531780" type="0" value="0.018" />
+  <presetinput identifier="Light_Angle" uid="2500532004" type="0" value="0.669" />
+  <presetinput identifier="Hue_Shift" uid="2500532007" type="0" value="0.445" />
+  <presetinput identifier="Luminosity" uid="2500532009" type="0" value="0.498" />
+  <presetinput identifier="Holes" uid="2501586452" type="0" value="0.154" />
+  <presetinput identifier="Stains" uid="2501652017" type="0" value="0.896" />
+  <presetinput identifier="$randomseed" uid="3326458931" type="4" value="20445599" />
+ </sbspreset>
+</sbspresets>

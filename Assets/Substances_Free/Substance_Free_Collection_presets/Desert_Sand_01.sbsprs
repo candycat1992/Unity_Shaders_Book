@@ -1,0 +1,28 @@
+<sbspresets formatversion="1.0" count="3" >
+ <sbspreset pkgurl="pkg://Desert_Sand_01/Desert_Sand_01" label="var01" >
+  <presetinput identifier="Waves_Width" uid="1102048223" type="0" value="0.565" />
+  <presetinput identifier="Waves_Warp" uid="1103311776" type="0" value="0.94" />
+  <presetinput identifier="Waves_Lenght" uid="1103324536" type="0" value="0.737" />
+  <presetinput identifier="Zoom" uid="1103327370" type="0" value="0.838" />
+  <presetinput identifier="$outputsize" uid="1143389743" type="8" value="9,9" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Desert_Sand_01/Desert_Sand_01" label="var02" >
+  <presetinput identifier="Sand_Color" uid="1056719830" type="2" value="0.843,0.831,0.776" />
+  <presetinput identifier="Waves_Width" uid="1102048223" type="0" value="0.812" />
+  <presetinput identifier="Waves_Warp" uid="1103311776" type="0" value="0.175" />
+  <presetinput identifier="Waves_Lenght" uid="1103324536" type="0" value="0" />
+  <presetinput identifier="Zoom" uid="1103327370" type="0" value="0.951" />
+  <presetinput identifier="$outputsize" uid="1143389743" type="8" value="9,9" />
+ </sbspreset>
+ <sbspreset pkgurl="pkg://Desert_Sand_01/Desert_Sand_01" label="var03" >
+  <presetinput identifier="Sand_Color" uid="1056719830" type="2" value="0.843,0.808,0.729" />
+  <presetinput identifier="Flow" uid="1074373339" type="0" value="1318.36" />
+  <presetinput identifier="Normal" uid="1078997615" type="0" value="1" />
+  <presetinput identifier="Emboss" uid="1079065910" type="0" value="10" />
+  <presetinput identifier="Waves_Width" uid="1102048223" type="0" value="0.856" />
+  <presetinput identifier="Waves_Warp" uid="1103311776" type="0" value="1" />
+  <presetinput identifier="Waves_Lenght" uid="1103324536" type="0" value="0.049" />
+  <presetinput identifier="Zoom" uid="1103327370" type="0" value="0.028" />
+  <presetinput identifier="$outputsize" uid="1143389743" type="8" value="9,9" />
+ </sbspreset>
+</sbspresets>

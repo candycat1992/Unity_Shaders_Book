@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: c0a19574980c74d0b910fb0b696979df
+timeCreated: 1437915469
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: ankle_L
+    100002: ankle_R
+    100004: arrow_1
+    100006: arrow_2
+    100008: bicep_L
+    100010: bicep_R
+    100012: bow_1
+    100014: bowstring_jnt
+    100016: cape_R0C0
+    100018: cape_R0C1
+    100020: cape_R0C2
+    100022: cape_R1C0
+    100024: cape_R1C1
+    100026: cape_R1C2
+    100028: cape_R2C0
+    100030: cape_R2C1
+    100032: cape_R2C2
+    100034: clavicle_L
+    100036: clavicle_R
+    100038: elbow_L
+    100040: elbow_R
+    100042: forearm_jnt
+    100044: head
+    100046: Index_plc0_L
+    100048: joint1
+    100050: joint2
+    100052: joint3
+    100054: joint6
+    100056: joint7
+    100058: joint8
+    100060: knee_L
+    100062: knee_R
+    100064: mid_0_R
+    100066: mid_1_R
+    100068: neck1
+    100070: ponyTail_R0C0
+    100072: ponyTail_R1C0
+    100074: ponyTip
+    100076: quiver
+    100078: ring_0_R
+    100080: ring_1_R
+    100082: root
+    100084: spine2
+    100086: spine3
+    100088: thigh_L
+    100090: thigh_R
+    100092: thumb_0_R
+    100094: thumb_1_R
+    100096: Thumb_plc0_L
+    100098: Thumb_plc0_L 1
+    100100: toeBase_L
+    100102: toeBase_R
+    100104: Wind_Runner_Cape
+    100106: windrunner_6k
+    100108: //RootNode
+    100110: wrist_L
+    100112: wrist_R
+    400000: ankle_L
+    400002: ankle_R
+    400004: arrow_1
+    400006: arrow_2
+    400008: bicep_L
+    400010: bicep_R
+    400012: bow_1
+    400014: bowstring_jnt
+    400016: cape_R0C0
+    400018: cape_R0C1
+    400020: cape_R0C2
+    400022: cape_R1C0
+    400024: cape_R1C1
+    400026: cape_R1C2
+    400028: cape_R2C0
+    400030: cape_R2C1
+    400032: cape_R2C2
+    400034: clavicle_L
+    400036: clavicle_R
+    400038: elbow_L
+    400040: elbow_R
+    400042: forearm_jnt
+    400044: head
+    400046: Index_plc0_L
+    400048: joint1
+    400050: joint2
+    400052: joint3
+    400054: joint6
+    400056: joint7
+    400058: joint8
+    400060: knee_L
+    400062: knee_R
+    400064: mid_0_R
+    400066: mid_1_R
+    400068: neck1
+    400070: ponyTail_R0C0
+    400072: ponyTail_R1C0
+    400074: ponyTip
+    400076: quiver
+    400078: ring_0_R
+    400080: ring_1_R
+    400082: root
+    400084: spine2
+    400086: spine3
+    400088: thigh_L
+    400090: thigh_R
+    400092: thumb_0_R
+    400094: thumb_1_R
+    400096: Thumb_plc0_L
+    400098: Thumb_plc0_L 1
+    400100: toeBase_L
+    400102: toeBase_R
+    400104: Wind_Runner_Cape
+    400106: windrunner_6k
+    400108: //RootNode
+    400110: wrist_L
+    400112: wrist_R
+    4300000: Wind_Runner_Cape
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Wind_Runner_Cape
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

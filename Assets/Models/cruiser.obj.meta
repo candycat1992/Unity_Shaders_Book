@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: f34a0d82aa8c342eea83c1039334bb40
+timeCreated: 1437882563
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: command_center
+    100002: //RootNode
+    100004: dockingtube
+    100006: dockingtube_door
+    100008: engine1
+    100010: engine2
+    100012: engine_inside
+    100014: enginearm
+    100016: hull
+    100018: hull_engine_inside
+    100020: landing_door
+    100022: landing_strip
+    100024: rocketlauncher1
+    100026: rocketlauncher2
+    100028: rocketlauncher3
+    100030: rocketlauncher4
+    400000: command_center
+    400002: //RootNode
+    400004: dockingtube
+    400006: dockingtube_door
+    400008: engine1
+    400010: engine2
+    400012: engine_inside
+    400014: enginearm
+    400016: hull
+    400018: hull_engine_inside
+    400020: landing_door
+    400022: landing_strip
+    400024: rocketlauncher1
+    400026: rocketlauncher2
+    400028: rocketlauncher3
+    400030: rocketlauncher4
+    2300000: command_center
+    2300002: dockingtube
+    2300004: dockingtube_door
+    2300006: engine1
+    2300008: engine2
+    2300010: engine_inside
+    2300012: enginearm
+    2300014: hull
+    2300016: hull_engine_inside
+    2300018: landing_door
+    2300020: landing_strip
+    2300022: rocketlauncher1
+    2300024: rocketlauncher2
+    2300026: rocketlauncher3
+    2300028: rocketlauncher4
+    3300000: command_center
+    3300002: dockingtube
+    3300004: dockingtube_door
+    3300006: engine1
+    3300008: engine2
+    3300010: engine_inside
+    3300012: enginearm
+    3300014: hull
+    3300016: hull_engine_inside
+    3300018: landing_door
+    3300020: landing_strip
+    3300022: rocketlauncher1
+    3300024: rocketlauncher2
+    3300026: rocketlauncher3
+    3300028: rocketlauncher4
+    4300000: command_center
+    4300002: dockingtube
+    4300004: dockingtube_door
+    4300006: engine1
+    4300008: engine2
+    4300010: engine_inside
+    4300012: enginearm
+    4300014: hull
+    4300016: hull_engine_inside
+    4300018: landing_door
+    4300020: landing_strip
+    4300022: rocketlauncher1
+    4300024: rocketlauncher2
+    4300026: rocketlauncher3
+    4300028: rocketlauncher4
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

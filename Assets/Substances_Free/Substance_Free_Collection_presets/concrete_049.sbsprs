@@ -1,0 +1,21 @@
+<sbspresets formatversion="1.0" count="2">
+ <sbspreset pkgurl="pkg://concrete_049/concrete_049" label="var01">
+  <presetinput identifier="$outputsize" uid="406099394" type="8" value="9,9"/>
+  <presetinput identifier="Cracks" uid="490248494" type="0" value="0"/>
+  <presetinput identifier="Dirtiness" uid="490253639" type="0" value="0"/>
+  <presetinput identifier="Peeling" uid="490330348" type="0" value="0"/>
+  <presetinput identifier="Rust" uid="490333640" type="0" value="0"/>
+  <presetinput identifier="$randomseed" uid="1330021264" type="4" value="1177915429"/>
+  <presetinput identifier="Top_Frame" uid="1657293265" type="4" value="0"/>
+ </sbspreset>
+ <sbspreset pkgurl="pkg://concrete_049/concrete_049" label="var02">
+  <presetinput identifier="$outputsize" uid="406099394" type="8" value="9,9"/>
+  <presetinput identifier="Cracks" uid="490248494" type="0" value="0.228"/>
+  <presetinput identifier="Dirtiness" uid="490253639" type="0" value="0.201"/>
+  <presetinput identifier="Peeling" uid="490330348" type="0" value="0.215"/>
+  <presetinput identifier="Rust" uid="490333640" type="0" value="0"/>
+  <presetinput identifier="$randomseed" uid="1330021264" type="4" value="-285057371"/>
+  <presetinput identifier="First_Layer_Color" uid="1657770522" type="2" value="0.694,0.675,0.616"/>
+  <presetinput identifier="Metal_Frame_Color" uid="1657770527" type="2" value="0.204,0.18,0.165"/>
+ </sbspreset>
+</sbspresets>
