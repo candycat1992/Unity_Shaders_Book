@@ -1,4 +1,4 @@
-﻿Shader "Unity Shaders Book/Chapter7-SingleTexture" {
+﻿Shader "Unity Shaders Book/Chapter7/SingleTexture" {
 	Properties {
 		_Color ("Color Tint", Color) = (1,1,1,1)
 		_MainTex ("Main Tex", 2D) = "white" {}

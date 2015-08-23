@@ -3,8 +3,8 @@ using System.Collections;
 
 public class GenerateNormalMapFromHeightMap : MonoBehaviour {
 
-	public Texture2D m_heightMap;
-	public Texture2D m_normalMap;
+	private Texture2D m_heightMap;
+	private Texture2D m_normalMap;
 
 	// Use this for initialization
 	void Start () {
