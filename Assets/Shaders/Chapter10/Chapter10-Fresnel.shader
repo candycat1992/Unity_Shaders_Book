@@ -1,4 +1,4 @@
-﻿Shader "Unity Shader Book/Chapter10/Fresnel" {
+﻿Shader "Unity Shaders Book/Chapter10/Fresnel" {
 	Properties {
 		_Color ("Main Color", Color) = (1,1,1,1)
 		_RefractRatio ("Refraction Ratio", Range(0.1, 1)) = 0.5
