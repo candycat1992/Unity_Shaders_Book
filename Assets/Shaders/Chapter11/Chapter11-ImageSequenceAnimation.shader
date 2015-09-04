@@ -1,60 +1,68 @@
 ﻿Shader "Unity Shaders Book/Chapter 11/Image Sequence Animation" {
 	Properties {
-		_TintColor ("Tint Color", Color) = (1, 1, 1, 1)  
+		_Color ("Tint Color", Color) = (1, 1, 1, 1)  
 		_MainTex ("Image Sequence", 2D) = "white" {}
-    	_SizeX ("SizeX", Float) = 4  
-    	_SizeY ("SizeY", Float) = 4  
-    	_Speed ("Speed", Float) = 200  
+    	_HorizontalAmount ("Horizontal Amount", Float) = 4  
+    	_VerticalAmount ("Vertical Amount", Float) = 4  
+    	_Speed ("Speed", Range(1, 100)) = 30  
 	}
 	SubShader {  
         Pass {
         	Tags { "LightMode"="ForwardBase" }
         	
-           	Blend SrcAlpha One
+           	Blend SrcAlpha OneMinusSrcAlpha
            
-            CGPROGRAM  
+            CGPROGRAM
+            
+            #pragma multi_compile_fwdbase	
+            
             #pragma vertex vert  
-            #pragma fragment frag  
-            #pragma multi_compile_particles  
+            #pragma fragment frag
  
-            #include "UnityCG.cginc"  
+            #include "UnityCG.cginc"
   
-            sampler2D _MainTex;  
+  			fixed4 _Color;
+            sampler2D _MainTex;
             float4 _MainTex_ST;
-            fixed4 _TintColor;  
-            fixed _SizeX;  
-            fixed _SizeY;  
-            fixed _Speed;  
+            float _HorizontalAmount;
+            float _VerticalAmount;
+            float _Speed;
               
-            struct appdata_t {  
-                float4 vertex : POSITION;  
-                fixed4 color : COLOR;  
-                float2 texcoord : TEXCOORD0;  
+            struct a2v {  
+                float4 vertex : POSITION; 
+                float2 texcoord : TEXCOORD0;
             };  
   
             struct v2f {  
-                float4 pos : SV_POSITION;  
-                fixed4 color : COLOR;  
-                float2 uv : TEXCOORD0;  
+                float4 pos : SV_POSITION;
+                float2 uv : TEXCOORD0;
             };  
             
-            v2f vert (appdata_t v) {  
+            v2f vert (a2v v) {  
                 v2f o;  
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);  
-                o.color = v.color;  
                 o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);  
                 return o;
             }  
 
-            fixed4 frag (v2f i) : SV_Target {  
-                int indexX=fmod (_Time.x * _Speed, _SizeX);  
-                int indexY=fmod ((_Time.x * _Speed) / _SizeX, _SizeY);  
-  
-                fixed2 seqUV = float2((i.uv.x) /_SizeX, (i.uv.y)/_SizeY);  
-                seqUV.x += indexX/_SizeX;  
-                seqUV.y -= indexY/_SizeY;  
-                return _TintColor * tex2D(_MainTex, seqUV);  
-            }  
+            fixed4 frag (v2f i) : SV_Target {
+  				float time = floor(_Time.y * _Speed);  
+				float row = floor(time / _HorizontalAmount);
+				float column = time - row * _VerticalAmount;
+
+//                fixed2 uv = float2(i.uv.x /_HorizontalAmount, i.uv.y / _VerticalAmount);
+//                uv.x += column / _HorizontalAmount;
+//                uv.y -= row / _VerticalAmount;
+				fixed2 uv = i.uv + fixed2(column, -row);
+				uv.x /=  _HorizontalAmount;
+				uv.y /= _VerticalAmount;
+                
+                fixed4 c = tex2D(_MainTex, uv);
+                c.rgb *= _Color;
+                
+                return c;
+            }
+            
             ENDCG   
         }  
 	} 

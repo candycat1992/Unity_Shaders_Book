@@ -129,5 +129,5 @@ public class ProceduralTextureGeneration : MonoBehaviour {
 		proceduralTexture.Apply();
 
 		return proceduralTexture;
-	}	
+	}
 }

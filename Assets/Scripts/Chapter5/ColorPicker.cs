@@ -7,7 +7,7 @@ using System.Collections;
 
 public class ColorPicker : MonoBehaviour {
 	
-	public BoxCollider collider;
+	public BoxCollider pickerCollider;
 
 	private bool m_grab;
 	private Camera m_camera;
@@ -15,8 +15,8 @@ public class ColorPicker : MonoBehaviour {
 	private static Texture2D m_staticRectTexture;
 	private static GUIStyle m_staticRectStyle;
 
-	private static Vector3 _pixelPosition = Vector3.zero;
-	private Color _pickedColor = Color.white;
+	private static Vector3 m_pixelPosition = Vector3.zero;
+	private Color m_pickedColor = Color.white;
 
 	void Awake() {
 		// Get the Camera component
@@ -28,12 +28,12 @@ public class ColorPicker : MonoBehaviour {
 
 		// Attach a BoxCollider to this camera
 		// In order to receive mouse events
-		if (collider == null) {
-			collider = gameObject.AddComponent<BoxCollider>();
+		if (pickerCollider == null) {
+			pickerCollider = gameObject.AddComponent<BoxCollider>();
 			// Make sure the collider is in the camera's frustum
-			collider.center = Vector3.zero;
-			collider.center += m_camera.transform.worldToLocalMatrix.MultiplyVector(m_camera.transform.forward) * (m_camera.nearClipPlane + 0.2f);
-			collider.size = new Vector3(Screen.width, Screen.height, 0.1f);
+			pickerCollider.center = Vector3.zero;
+			pickerCollider.center += m_camera.transform.worldToLocalMatrix.MultiplyVector(m_camera.transform.forward) * (m_camera.nearClipPlane + 0.2f);
+			pickerCollider.size = new Vector3(Screen.width, Screen.height, 0.1f);
 		}
 	}
 
@@ -67,7 +67,7 @@ public class ColorPicker : MonoBehaviour {
 			m_screenRenderTexture = new Texture2D(Screen.width, Screen.height);
 			m_screenRenderTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
 			m_screenRenderTexture.Apply();
-			_pickedColor = m_screenRenderTexture.GetPixel(Mathf.FloorToInt(_pixelPosition.x), Mathf.FloorToInt(_pixelPosition.y));
+			m_pickedColor = m_screenRenderTexture.GetPixel(Mathf.FloorToInt(m_pixelPosition.x), Mathf.FloorToInt(m_pixelPosition.y));
 			m_grab = false;
 		}
 	}
@@ -75,15 +75,15 @@ public class ColorPicker : MonoBehaviour {
 	void OnMouseDown() {
 		m_grab = true;
 		// Record the mouse position to pick pixel
-		_pixelPosition = Input.mousePosition;
+		m_pixelPosition = Input.mousePosition;
 	}
 
 	void OnGUI() {
 		GUI.Box(new Rect(0, 0, 120, 200), "Color Picker");
-		GUIDrawRect(new Rect(20, 30, 80, 80), _pickedColor);
-		GUI.Label(new Rect(10, 120, 100, 20), "R: " + System.Math.Round((double)_pickedColor.r, 4) + "\t(" + Mathf.FloorToInt(_pickedColor.r * 255)+ ")");
-		GUI.Label(new Rect(10, 140, 100, 20), "G: " + System.Math.Round((double)_pickedColor.g, 4) + "\t(" + Mathf.FloorToInt(_pickedColor.g * 255)+ ")");
-		GUI.Label(new Rect(10, 160, 100, 20), "B: " + System.Math.Round((double)_pickedColor.b, 4) + "\t(" + Mathf.FloorToInt(_pickedColor.b * 255)+ ")");
-		GUI.Label(new Rect(10, 180, 100, 20), "A: " + System.Math.Round((double)_pickedColor.a, 4) + "\t(" + Mathf.FloorToInt(_pickedColor.a * 255)+ ")");
+		GUIDrawRect(new Rect(20, 30, 80, 80), m_pickedColor);
+		GUI.Label(new Rect(10, 120, 100, 20), "R: " + System.Math.Round((double)m_pickedColor.r, 4) + "\t(" + Mathf.FloorToInt(m_pickedColor.r * 255)+ ")");
+		GUI.Label(new Rect(10, 140, 100, 20), "G: " + System.Math.Round((double)m_pickedColor.g, 4) + "\t(" + Mathf.FloorToInt(m_pickedColor.g * 255)+ ")");
+		GUI.Label(new Rect(10, 160, 100, 20), "B: " + System.Math.Round((double)m_pickedColor.b, 4) + "\t(" + Mathf.FloorToInt(m_pickedColor.b * 255)+ ")");
+		GUI.Label(new Rect(10, 180, 100, 20), "A: " + System.Math.Round((double)m_pickedColor.a, 4) + "\t(" + Mathf.FloorToInt(m_pickedColor.a * 255)+ ")");
 	}
 }

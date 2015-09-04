@@ -15,7 +15,6 @@ public class TestRenderImage : MonoBehaviour {
 	public Color backColor = Color.gray;
 
 	GameObject Chindcam;
-	Camera maincamera;
 	RenderTexture rt;
 
 
@@ -62,7 +61,7 @@ public class TestRenderImage : MonoBehaviour {
 	
 	void OnRenderImage (RenderTexture sourceTexture, RenderTexture destTexture){
 		if (curShader != null) {  
-			material.SetTexture("_Ramp",RampTex);
+			material.SetTexture("_Ramp", RampTex);
 
 			Graphics.Blit(sourceTexture, destTexture, material);  
 		} else {  
@@ -79,6 +78,5 @@ public class TestRenderImage : MonoBehaviour {
 		if (curMaterial != null) {  
 			DestroyImmediate(curMaterial);  
 		} 
-		Destroy (maincamera);
 	}  
 }  

@@ -6,26 +6,26 @@ using System.Collections;
 
 public class InvertCamera : MonoBehaviour {
 
-	Camera camera;
+	private Camera m_camera;
 	
 	void Start() {
-		camera = GetComponent<Camera>();
-		Debug.Log(camera.projectionMatrix.inverse);
-		Debug.Log(camera.projectionMatrix);
+		m_camera = GetComponent<Camera>();
+		Debug.Log(m_camera.projectionMatrix.inverse);
+		Debug.Log(m_camera.projectionMatrix);
 	}
 	
 	void OnPreCull() {
-		camera.ResetWorldToCameraMatrix();
-		camera.ResetProjectionMatrix();
-		camera.projectionMatrix = camera.projectionMatrix * Matrix4x4.Scale(new Vector3(-1, 1, 1));
+		m_camera.ResetWorldToCameraMatrix();
+		m_camera.ResetProjectionMatrix();
+		m_camera.projectionMatrix = m_camera.projectionMatrix * Matrix4x4.Scale(new Vector3(-1, 1, 1));
 //		Debug.Log(camera.projectionMatrix);
 	}
 	
 	void OnPreRender() {
-		GL.SetRevertBackfacing(true);
+		GL.invertCulling = true;
 	}
 	
 	void OnPostRender() {
-		GL.SetRevertBackfacing(false);
+		GL.invertCulling = false;
 	}
 }
