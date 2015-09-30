@@ -3,10 +3,14 @@
 		_Diffuse ("Diffuse", Color) = (1, 1, 1, 1)
 	}
 	SubShader {
+		Tags { "RenderType"="Opaque" }
+		
 		Pass { 
 			Tags { "LightMode"="ForwardBase" }
 		
 			CGPROGRAM
+			
+			#pragma multi_compile_fwbase
 			
 			#pragma vertex vert
 			#pragma fragment frag

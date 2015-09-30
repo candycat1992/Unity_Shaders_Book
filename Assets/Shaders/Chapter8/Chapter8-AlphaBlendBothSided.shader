@@ -151,5 +151,5 @@
 			ENDCG
 		}
 	} 
-	FallBack "VertexLit"
+	FallBack "Transparent/VertexLit"
 }

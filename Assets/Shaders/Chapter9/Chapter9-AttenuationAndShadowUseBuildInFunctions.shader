@@ -1,10 +1,12 @@
-﻿Shader "Unity Shader Book/Chapter9 Attenuation And Shadow Use Build-in Functions" {
+﻿Shader "Unity Shaders Book/Chapter 9/Attenuation And Shadow Use Build-in Functions" {
 	Properties {
 		_Diffuse ("Diffuse", Color) = (1, 1, 1, 1)
 		_Specular ("Specular", Color) = (1, 1, 1, 1)
 		_Gloss ("Gloss", Range(8.0, 256)) = 20
 	}
 	SubShader {
+		Tags { "RenderType"="Opaque" }
+		
 		Pass {
 			// Pass for ambient light & first pixel light (directional light)
 			Tags { "LightMode"="ForwardBase" }
@@ -43,7 +45,7 @@
 			 	o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 			 	
 			 	// Transform the normal fram object space to world space
-			 	o.worldNormal = mul(v.normal, float3x3(_World2Object));
+			 	o.worldNormal = mul(v.normal, (float3x3)_World2Object);
 			 	
 			 	// Transform the vertex from object spacet to world space
 			 	o.worldPos = mul(_Object2World, v.vertex).xyz;

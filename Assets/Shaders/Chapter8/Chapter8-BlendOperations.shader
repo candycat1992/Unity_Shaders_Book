@@ -1,4 +1,4 @@
-﻿Shader "Unity Shader Book/Chapter8-Blend Operations 0" {
+﻿Shader "Unity Shaders Book/Chapter 8/Blend Operations 0" {
 	Properties {
 		_Color ("Main Color", Color) = (1,1,1,1)
 		_MainTex ("Base (RGB) Trans (A)", 2D) = "white" {}
@@ -58,5 +58,5 @@
 			ENDCG
 		}
 	} 
-	FallBack "Diffuse"
+	FallBack "Transparent/VertexLit"
 }

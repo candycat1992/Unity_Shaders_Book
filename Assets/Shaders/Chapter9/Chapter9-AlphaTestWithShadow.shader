@@ -89,5 +89,4 @@
 		}
 	} 
 	FallBack "Transparent/Cutout/VertexLit"
-//	FallBack "VertexLit"
 }

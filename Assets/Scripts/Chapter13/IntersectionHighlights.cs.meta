@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 72371ef86324d42a1a0ec41cc17993bc
+timeCreated: 1443586538
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - intersectionHighlightsShader: {fileID: 4800000, guid: b75cb310956d54952a1ead0401f61864,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

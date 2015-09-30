@@ -6,6 +6,8 @@
 		_Gloss ("Gloss", Range(8.0, 256)) = 20
 	}
 	SubShader {
+		Tags { "RenderType"="Opaque" }
+		
 		Pass { 
 			Tags { "LightMode"="ForwardBase" }
 		
