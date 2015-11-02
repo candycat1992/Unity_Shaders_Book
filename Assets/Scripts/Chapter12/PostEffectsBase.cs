@@ -5,18 +5,35 @@ using System.Collections;
 [RequireComponent (typeof(Camera))]
 public class PostEffectsBase : MonoBehaviour {
 
-	public virtual void CheckResources() {
-		Debug.LogWarning("CheckResources () for " + this.ToString() + " should be overwritten.");
+	// Called when start
+	protected void CheckResources() {
+		bool isSupported = CheckSupport();
+		
+		if (isSupported == false) {
+			NotSupported();
+		}
+	}
+
+	// Called in CheckResources to check support on this platform
+	protected bool CheckSupport() {
+		if (SystemInfo.supportsImageEffects == false || SystemInfo.supportsRenderTextures == false) {
+			Debug.LogWarning("This platform does not support image effects or render textures.");
+			return false;
+		}
+		
+		return true;
+	}
+
+	// Called when the platform doesn't support this effect
+	protected void NotSupported() {
+		enabled = false;
 	}
 	
 	protected void Start() {
 		CheckResources();
 	}
 
-	protected void NotSupported() {
-		enabled = false;
-	}
-
+	// Called when need to create the material used by this effect
 	protected Material CheckShaderAndCreateMaterial(Shader shader, Material material) {
 		if (shader == null) {
 			return null;
@@ -36,14 +53,5 @@ public class PostEffectsBase : MonoBehaviour {
 			else 
 				return null;
 		}
-	}
-
-	protected bool CheckSupport() {
-		if (SystemInfo.supportsImageEffects == false || SystemInfo.supportsRenderTextures == false) {
-			Debug.LogWarning("This platform does not support image effects or render textures.");
-			return false;
-		}
-	
-		return true;
 	}
 }

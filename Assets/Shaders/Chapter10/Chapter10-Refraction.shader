@@ -1,10 +1,10 @@
 ﻿Shader "Unity Shader Book/Chapter10/Refraction" {
 	Properties {
 		_Color ("Main Color", Color) = (1,1,1,1)
-		_RefractColor ("Reflection Color", Color) = (1, 1, 1, 1)
-		_RefractAmount ("Reflect Amount", Range(0, 1)) = 1
+		_RefractColor ("Refraction Color", Color) = (1, 1, 1, 1)
+		_RefractAmount ("Refraction Amount", Range(0, 1)) = 1
 		_RefractRatio ("Refraction Ratio", Range(0.1, 1)) = 0.5
-		_Cubemap ("Reflection Cubemap", Cube) = "_Skybox" {}
+		_Cubemap ("Refraction Cubemap", Cube) = "_Skybox" {}
 	}
 	SubShader {
 		Pass { 
@@ -23,7 +23,7 @@
 			
 			fixed4 _Color;
 			fixed4 _RefractColor;
-			fixed _RefractAmount;
+			float _RefractAmount;
 			fixed _RefractRatio;
 			samplerCUBE _Cubemap;
 			

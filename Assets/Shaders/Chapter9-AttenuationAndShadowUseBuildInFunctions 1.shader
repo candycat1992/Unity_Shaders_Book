@@ -5,6 +5,8 @@
 		_Gloss ("Gloss", Range(8.0, 256)) = 20
 	}
 	SubShader {
+		Tags { "RenderType"="Opaque" }
+		
 		Pass {
 			// Pass for ambient light & first pixel light (directional light)
 			Tags { "LightMode"="ForwardBase" }

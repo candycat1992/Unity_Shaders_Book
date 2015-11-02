@@ -15,15 +15,7 @@ public class IntersectionHighlights : PostEffectsBase {
 	void OnEnable() {
 		GetComponent<Camera>().depthTextureMode |= DepthTextureMode.Depth;
 	}
-	
-	public override void CheckResources() {
-		bool isSupported = CheckSupport();
 		
-		if (isSupported == false) {
-			NotSupported();
-		}
-	} 
-	
 	void OnRenderImage (RenderTexture src, RenderTexture dest) {
 		if (material != null) {
 			Graphics.Blit(src, dest, material);

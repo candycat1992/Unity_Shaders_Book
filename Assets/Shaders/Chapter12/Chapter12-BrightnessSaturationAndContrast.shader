@@ -7,6 +7,8 @@
 	}
 	SubShader {
 		Pass {  
+			ZTest Always Cull Off ZWrite Off
+			
             CGPROGRAM  
             #pragma vertex vert  
             #pragma fragment frag  
@@ -14,9 +16,9 @@
             #include "UnityCG.cginc"  
               
             sampler2D _MainTex;  
-            float _Brightness;
-            float _Saturation;
-            float _Contrast;
+            half _Brightness;
+            half _Saturation;
+            half _Contrast;
               
             struct v2f {
 	        	float4 pos : SV_POSITION;
@@ -57,6 +59,7 @@
               
             ENDCG  
         }  
-	} 
-	FallBack "Diffuse"
+	}
+	
+	Fallback Off
 }

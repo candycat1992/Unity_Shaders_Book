@@ -6,10 +6,12 @@ public class MotionBlurWithDepthTexture : PostEffectsBase {
 	public Shader motionBlurShader;
 	private Material motionBlurMaterial = null;
 
-	[Range(0.0f, 1.0f)]
-	public float blurSize = 0.5f;
-
-	private Matrix4x4 previousViewProjectionMatrix;
+	public Material material {  
+		get {
+			motionBlurMaterial = CheckShaderAndCreateMaterial(motionBlurShader, motionBlurMaterial);
+			return motionBlurMaterial;
+		}  
+	}
 
 	private Camera myCamera;
 	public Camera camera {
@@ -21,24 +23,16 @@ public class MotionBlurWithDepthTexture : PostEffectsBase {
 		}
 	}
 
-	public Material material {  
-		get {
-			motionBlurMaterial = CheckShaderAndCreateMaterial(motionBlurShader, motionBlurMaterial);
-			return motionBlurMaterial;
-		}  
-	}
+	[Range(0.0f, 1.0f)]
+	public float blurSize = 0.5f;
+
+	private Matrix4x4 previousViewProjectionMatrix;
 	
 	void OnEnable() {
-		GetComponent<Camera>().depthTextureMode |= DepthTextureMode.Depth;
-	}
+		camera.depthTextureMode |= DepthTextureMode.Depth;
 
-	public override void CheckResources() {
-		bool isSupported = CheckSupport();
-		
-		if (isSupported == false) {
-			NotSupported();
-		}
-	} 
+		previousViewProjectionMatrix = camera.projectionMatrix * camera.worldToCameraMatrix;
+	}
 	
 	void OnRenderImage (RenderTexture src, RenderTexture dest) {
 		if (material != null) {
@@ -46,11 +40,10 @@ public class MotionBlurWithDepthTexture : PostEffectsBase {
 
 			material.SetMatrix("_PreviousViewProjectionMatrix", previousViewProjectionMatrix);
 			Matrix4x4 currentViewProjectionMatrix = camera.projectionMatrix * camera.worldToCameraMatrix;
-			Matrix4x4 currentViewProjectionInverseMatrix = Matrix4x4.Inverse(currentViewProjectionMatrix);
+			Matrix4x4 currentViewProjectionInverseMatrix = currentViewProjectionMatrix.inverse;
 			material.SetMatrix("_CurrentViewProjectionInverseMatrix", currentViewProjectionInverseMatrix);
 			previousViewProjectionMatrix = currentViewProjectionMatrix;
-			
-			// Render the image using the motion blur shader
+
 			Graphics.Blit (src, dest, material);
 		} else {
 			Graphics.Blit(src, dest);

@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: 342adb3a3b010414991dec94ed663487
+timeCreated: 1444487779
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: SkyCarBody
+    100004: SkyCarBrakeLightsGlow
+    100006: SkyCarComponents
+    100008: SkyCarHeadLightsGlow
+    100010: SkyCarMudGuardFrontLeft
+    100012: SkyCarMudGuardFrontRight
+    100014: SkyCarSuspensionFrontLeft
+    100016: SkyCarSuspensionFrontRight
+    100018: SkyCarWheelFrontLeft
+    100020: SkyCarWheelFrontRight
+    100022: SkyCarWheelRearLeft
+    100024: SkyCarWheelRearRight
+    400000: //RootNode
+    400002: SkyCarBody
+    400004: SkyCarBrakeLightsGlow
+    400006: SkyCarComponents
+    400008: SkyCarHeadLightsGlow
+    400010: SkyCarMudGuardFrontLeft
+    400012: SkyCarMudGuardFrontRight
+    400014: SkyCarSuspensionFrontLeft
+    400016: SkyCarSuspensionFrontRight
+    400018: SkyCarWheelFrontLeft
+    400020: SkyCarWheelFrontRight
+    400022: SkyCarWheelRearLeft
+    400024: SkyCarWheelRearRight
+    2300000: SkyCarBody
+    2300002: SkyCarBrakeLightsGlow
+    2300004: SkyCarComponents
+    2300006: SkyCarHeadLightsGlow
+    2300008: SkyCarMudGuardFrontLeft
+    2300010: SkyCarMudGuardFrontRight
+    2300012: SkyCarSuspensionFrontLeft
+    2300014: SkyCarSuspensionFrontRight
+    2300016: SkyCarWheelFrontLeft
+    2300018: SkyCarWheelFrontRight
+    2300020: SkyCarWheelRearLeft
+    2300022: SkyCarWheelRearRight
+    3300000: SkyCarBody
+    3300002: SkyCarBrakeLightsGlow
+    3300004: SkyCarComponents
+    3300006: SkyCarHeadLightsGlow
+    3300008: SkyCarMudGuardFrontLeft
+    3300010: SkyCarMudGuardFrontRight
+    3300012: SkyCarSuspensionFrontLeft
+    3300014: SkyCarSuspensionFrontRight
+    3300016: SkyCarWheelFrontLeft
+    3300018: SkyCarWheelFrontRight
+    3300020: SkyCarWheelRearLeft
+    3300022: SkyCarWheelRearRight
+    4300000: SkyCarBrakeLightsGlow
+    4300002: SkyCarHeadLightsGlow
+    4300004: SkyCarWheelRearLeft
+    4300006: SkyCarWheelRearRight
+    4300008: SkyCarWheelFrontRight
+    4300010: SkyCarWheelFrontLeft
+    4300012: SkyCarComponents
+    4300014: SkyCarMudGuardFrontLeft
+    4300016: SkyCarSuspensionFrontLeft
+    4300018: SkyCarSuspensionFrontRight
+    4300020: SkyCarMudGuardFrontRight
+    4300022: SkyCarBody
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

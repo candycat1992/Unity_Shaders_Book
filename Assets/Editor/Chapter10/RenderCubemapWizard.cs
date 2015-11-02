@@ -18,9 +18,8 @@ public class RenderCubemapWizard : ScriptableWizard {
 		go.AddComponent<Camera>();
 		// place it on the object
 		go.transform.position = renderFromPosition.position;
-		go.transform.rotation = Quaternion.identity;
 		// render into cubemap		
-		go.GetComponent<Camera>().RenderToCubemap( cubemap );
+		go.GetComponent<Camera>().RenderToCubemap(cubemap);
 		
 		// destroy temporary camera
 		DestroyImmediate( go );

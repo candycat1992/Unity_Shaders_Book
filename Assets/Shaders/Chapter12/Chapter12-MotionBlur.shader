@@ -1,7 +1,7 @@
 ﻿Shader "Unity Shaders Book/Chapter 12/Motion Blur" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
-		_BlurSize ("Blur Size", Float) = 1.0
+		_BlurAmount ("Blur Amount", Float) = 1.0
 	}
 	SubShader {
 		CGINCLUDE
@@ -9,7 +9,7 @@
 		#include "UnityCG.cginc"
 		
 		sampler2D _MainTex;
-		half _BlurSize;
+		fixed _BlurAmount;
 		
 		struct v2f {
 			float4 pos : SV_POSITION;
@@ -31,7 +31,7 @@
 		}
 		
 		fixed4 fragRGB (v2f i) : SV_Target {
-			return fixed4(tex2D(_MainTex, i.uv).rgb, _BlurSize);
+			return fixed4(tex2D(_MainTex, i.uv).rgb, _BlurAmount);
 		}
 		
 		half4 fragA (v2f i) : SV_Target {
@@ -40,7 +40,8 @@
 		
 		ENDCG
 		
-		ZWrite Off
+		ZTest Always Cull Off ZWrite Off
+		
 		Pass {
 			Blend SrcAlpha OneMinusSrcAlpha
 			ColorMask RGB
@@ -53,7 +54,7 @@
 			ENDCG
 		}
         
-        Pass {       
+        Pass {   
         	Blend One Zero
 			ColorMask A
 			   	
@@ -65,5 +66,6 @@
             ENDCG  
         }
 	} 
-	FallBack "Diffuse"
+	
+ 	FallBack Off
 }

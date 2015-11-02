@@ -4,7 +4,7 @@ using System.Collections;
 public class BrightnessSaturationAndContrast : PostEffectsBase {
 
 	public Shader briSatConShader;
-	private Material briSatConMaterial = null;
+	private Material briSatConMaterial;
 	public Material material {  
 		get {
 			briSatConMaterial = CheckShaderAndCreateMaterial(briSatConShader, briSatConMaterial);
@@ -21,15 +21,7 @@ public class BrightnessSaturationAndContrast : PostEffectsBase {
 	[Range(0.0f, 3.0f)]
 	public float contrast = 1.0f;
 
-	public override void CheckResources() {
-		bool isSupported = CheckSupport();
-		
-		if (isSupported == false) {
-			NotSupported();
-		}
-	} 
-
-	void OnRenderImage (RenderTexture src, RenderTexture dest) {
+	void OnRenderImage(RenderTexture src, RenderTexture dest) {
 		if (material != null) {
 			material.SetFloat("_Brightness", brightness);
 			material.SetFloat("_Saturation", saturation);

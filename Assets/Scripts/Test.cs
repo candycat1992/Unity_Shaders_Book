@@ -11,13 +11,10 @@ public class Test : MonoBehaviour {
 		//		transform.Rotate(new Vector3(0, 0, z));  
 		//		transform.Rotate(new Vector3(0, 90, 0));  
 		//		transform.Rotate(new Vector3(y, 0, 0)); 
+		Shader.globalMaximumLOD = 10;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.rotation = Quaternion.identity;
-		transform.Rotate(new Vector3(0, 0, z));  
-		transform.Rotate(new Vector3(0, 90, 0));  
-		transform.Rotate(new Vector3(x, 0, 0)); 
 	}
 }

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6262b249477404e2b8bec7e6c0b4c777
+timeCreated: 1445229017
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - fogShader: {fileID: 4800000, guid: 27a249077a6d3441ba02e316f2431e8f, type: 3}
+  - noiseTexture: {fileID: 2800000, guid: 47cdda17bb08a47b0a50675cbb83cfa2, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

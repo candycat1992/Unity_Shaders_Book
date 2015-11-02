@@ -6,17 +6,6 @@ public class GaussianBlur : PostEffectsBase {
 	public Shader gaussianBlurShader;
 	private Material gaussianBlurMaterial = null;
 
-	// Blur iterations - larger number means more blur.
-	[Range(0, 4)]
-	public int iterations = 3;
-	
-	// Blur spread for each iteration - larger value means more blur
-	[Range(0.2f, 3.0f)]
-	public float blurSpread = 0.6f;
-
-	[Range(1, 8)]
-	public int downSample = 2;
-
 	public Material material {  
 		get {
 			gaussianBlurMaterial = CheckShaderAndCreateMaterial(gaussianBlurShader, gaussianBlurMaterial);
@@ -24,36 +13,17 @@ public class GaussianBlur : PostEffectsBase {
 		}  
 	}
 
-	public override void CheckResources() {
-		bool isSupported = CheckSupport();
-		
-		if (isSupported == false) {
-			NotSupported();
-		}
-	}
-
-//	// Called by the camera to apply the image effect
-//	void OnRenderImage (RenderTexture source, RenderTexture destination) {
-//		int rtW = source.width/4;
-//		int rtH = source.height/4;
-//		RenderTexture buffer = RenderTexture.GetTemporary(rtW, rtH, 0);
-//		
-//		// Copy source to the 4x4 smaller texture.
-//		DownSample4x (source, buffer);
-//		
-//		// Blur the small texture
-//		for(int i = 0; i < iterations; i++)
-//		{
-//			RenderTexture buffer2 = RenderTexture.GetTemporary(rtW, rtH, 0);
-//			FourTapCone (buffer, buffer2, i);
-//			RenderTexture.ReleaseTemporary(buffer);
-//			buffer = buffer2;
-//		}
-//		Graphics.Blit(buffer, destination);
-//		
-//		RenderTexture.ReleaseTemporary(buffer);
-//	}
-
+	// Blur iterations - larger number means more blur.
+	[Range(0, 4)]
+	public int iterations = 3;
+	
+	// Blur spread for each iteration - larger value means more blur
+	[Range(0.2f, 3.0f)]
+	public float blurSpread = 0.6f;
+	
+	[Range(1, 8)]
+	public int downSample = 2;
+	
 	/// 1st edition: just apply blur
 //	void OnRenderImage(RenderTexture src, RenderTexture dest) {
 //		if (material != null) {
