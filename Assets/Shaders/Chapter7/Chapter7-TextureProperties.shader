@@ -1,4 +1,4 @@
-﻿Shader "Unity Shader Book/Chapter7-TextureProperties" {
+﻿Shader "Unity Shaders Book/Chapter 7/Texture Properties" {
 	Properties {
 		_MainTex ("Main Tex", 2D) = "white" {}
 	}

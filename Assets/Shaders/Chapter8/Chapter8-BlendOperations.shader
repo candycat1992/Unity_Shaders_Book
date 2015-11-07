@@ -1,7 +1,7 @@
 ﻿Shader "Unity Shaders Book/Chapter 8/Blend Operations 0" {
 	Properties {
-		_Color ("Main Color", Color) = (1,1,1,1)
-		_MainTex ("Base (RGB) Trans (A)", 2D) = "white" {}
+		_Color ("Color Tint", Color) = (1, 1, 1, 1)
+		_MainTex ("Main Tex", 2D) = "white" {}
 		_AlphaScale ("Alpha Scale", Range(0, 1)) = 1
 	}
 	SubShader {
@@ -33,16 +33,13 @@
 			};
 			
 			struct v2f {
-				float4 position : SV_POSITION;
-				float3 worldNormal : TEXCOORD0;
-				float3 worldPosition : TEXCOORD1;
-				float2 uv : TEXCOORD2;
+				float4 pos : SV_POSITION;
+				float2 uv : TEXCOORD0;
 			};
 			
 			v2f vert(a2v v) {
 			 	v2f o;
-			 	// Transform the vertex from object space to projection space
-			 	o.position = mul(UNITY_MATRIX_MVP, v.vertex);
+			 	o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 
 			 	o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 			 	

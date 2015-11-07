@@ -1,6 +1,6 @@
 ﻿Shader "Unity Shaders Book/Common/Bumped Diffuse" {
 	Properties {
-		_Color ("Color Tint", Color) = (1,1,1,1)
+		_Color ("Color Tint", Color) = (1, 1, 1, 1)
 		_MainTex ("Main Tex", 2D) = "white" {}
 		_BumpMap ("Normal Map", 2D) = "bump" {}
 	}

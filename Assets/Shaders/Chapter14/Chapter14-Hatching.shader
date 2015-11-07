@@ -4,26 +4,27 @@
 ///
 Shader "Unity Shaders Book/Chapter 14/Hatching" {
 	Properties {
-		_Color ("Main Color", Color) = (1, 1, 1, 1)
+		_Color ("Color Tint", Color) = (1, 1, 1, 1)
 		_TileFactor ("Tile Factor", Float) = 1
-		_Outline ("Outline", Range(0.001, 1)) = 0.1
-		_Hatch0 ("Hatch 0", 2D	) = "white" {}
-		_Hatch1 ("Hatch 1", 2D	) = "white" {}
-		_Hatch2 ("Hatch 2", 2D	) = "white" {}
-		_Hatch3 ("Hatch 3", 2D	) = "white" {}
-		_Hatch4 ("Hatch 4", 2D	) = "white" {}
-		_Hatch5 ("Hatch 5", 2D	) = "white" {}
+		_Outline ("Outline", Range(0, 1)) = 0.1
+		_Hatch0 ("Hatch 0", 2D) = "white" {}
+		_Hatch1 ("Hatch 1", 2D) = "white" {}
+		_Hatch2 ("Hatch 2", 2D) = "white" {}
+		_Hatch3 ("Hatch 3", 2D) = "white" {}
+		_Hatch4 ("Hatch 4", 2D) = "white" {}
+		_Hatch5 ("Hatch 5", 2D) = "white" {}
 	}
 	
 	SubShader {
-		Tags { "RenderType"="Opaque" }
-        
+		Tags { "RenderType"="Opaque" "Queue"="Geometry"}
+		
 		UsePass "Unity Shaders Book/Chapter 14/Toon Shading/OUTLINE"
-        
+		
 		Pass {
 			Tags { "LightMode"="ForwardBase" }
 			
 			CGPROGRAM
+			
 			#pragma vertex vert
 			#pragma fragment frag 
 			
@@ -33,7 +34,7 @@ Shader "Unity Shaders Book/Chapter 14/Hatching" {
 			#include "Lighting.cginc"
 			#include "AutoLight.cginc"
 			#include "UnityShaderVariables.cginc"
-
+			
 			fixed4 _Color;
 			float _TileFactor;
 			sampler2D _Hatch0;
@@ -42,7 +43,7 @@ Shader "Unity Shaders Book/Chapter 14/Hatching" {
 			sampler2D _Hatch3;
 			sampler2D _Hatch4;
 			sampler2D _Hatch5;
-
+			
 			struct a2v {
 				float4 vertex : POSITION;
 				float4 tangent : TANGENT; 
@@ -56,20 +57,20 @@ Shader "Unity Shaders Book/Chapter 14/Hatching" {
 				fixed3 hatchWeights0 : TEXCOORD1;
 				fixed3 hatchWeights1 : TEXCOORD2;
 				float3 worldPos : TEXCOORD3;
-                SHADOW_COORDS(4)
+				SHADOW_COORDS(4)
 			};
 			
 			v2f vert(a2v v) {
 				v2f o;
-	
+				
 				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-
-				o.uv 	= v.texcoord.xy * _TileFactor;
+				
+				o.uv = v.texcoord.xy * _TileFactor;
 				
 				fixed3 worldLightDir = normalize(WorldSpaceLightDir(v.vertex));
-				fixed3 worldNormal = normalize(mul(v.normal, (float3x3)_World2Object));
+				fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);
 				fixed diff = max(0, dot(worldLightDir, worldNormal));
-
+				
 				o.hatchWeights0 = fixed3(0, 0, 0);
 				o.hatchWeights1 = fixed3(0, 0, 0);
 				
@@ -98,11 +99,11 @@ Shader "Unity Shaders Book/Chapter 14/Hatching" {
 				
 				o.worldPos = mul(_Object2World, v.vertex).xyz;
 				
-                TRANSFER_SHADOW(o);
-
+				TRANSFER_SHADOW(o);
+				
 				return o; 
 			}
-
+			
 			fixed4 frag(v2f i) : SV_Target {			
 				fixed4 hatchTex0 = tex2D(_Hatch0, i.uv) * i.hatchWeights0.x;
 				fixed4 hatchTex1 = tex2D(_Hatch1, i.uv) * i.hatchWeights0.y;
@@ -115,14 +116,13 @@ Shader "Unity Shaders Book/Chapter 14/Hatching" {
 				
 				fixed4 hatchColor = hatchTex0 + hatchTex1 + hatchTex2 + hatchTex3 + hatchTex4 + hatchTex5 + whiteColor;
 				
-                UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);
+				UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);
 								
 				return fixed4(hatchColor.rgb * _Color.rgb * atten, 1.0);
 			}
 			
 			ENDCG
 		}
-	} 
-	
+	}
 	FallBack "Diffuse"
 }

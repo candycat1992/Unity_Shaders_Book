@@ -7,17 +7,17 @@
 		_Multiplier ("Layer Multiplier", Float) = 1
 	}
 	SubShader {
+		Tags { "RenderType"="Opaque" "Queue"="Geometry"}
+		
 		Pass { 
 			Tags { "LightMode"="ForwardBase" }
-
+			
 			CGPROGRAM
-
-            #pragma multi_compile_fwdbase	
 			
 			#pragma vertex vert
 			#pragma fragment frag
 			
-			#include "Lighting.cginc"
+			#include "UnityCG.cginc"
 			
 			sampler2D _MainTex;
 			sampler2D _DetailTex;
@@ -40,9 +40,10 @@
 			v2f vert (a2v v) {
 				v2f o;
 				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				
 				o.uv.xy = TRANSFORM_TEX(v.texcoord, _MainTex) + frac(float2(_ScrollX, 0.0) * _Time.y);
 				o.uv.zw = TRANSFORM_TEX(v.texcoord, _DetailTex) + frac(float2(_Scroll2X, 0.0) * _Time.y);
-
+				
 				return o;
 			}
 			
@@ -58,7 +59,6 @@
 			
 			ENDCG
 		}
-	} 
-	
-	FallBack "Diffuse"
+	}
+	FallBack "VertexLit"
 }

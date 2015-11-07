@@ -57,7 +57,7 @@ public class ProceduralTextureGeneration : MonoBehaviour {
 	}
 	#endregion
 
-	private Texture2D generatedTexture = null;
+	private Texture2D m_generatedTexture = null;
 
 	// Use this for initialization
 	void Start () {
@@ -76,8 +76,8 @@ public class ProceduralTextureGeneration : MonoBehaviour {
 
 	private void _UpdateMaterial() {
 		if (material != null) {
-			generatedTexture = _GenerateProceduralTexture();
-			material.SetTexture("_MainTex", generatedTexture);
+			m_generatedTexture = _GenerateProceduralTexture();
+			material.SetTexture("_MainTex", m_generatedTexture);
 		}
 	}
 

@@ -56,29 +56,29 @@
 			float2 velocity = (currentPos.xy - previousPos.xy)/2.0f;
 			
 			float2 uv = i.uv;
-			float4 color = tex2D(_MainTex, uv);
+			float4 c = tex2D(_MainTex, uv);
 			uv += velocity * _BlurSize;
 			for (int it = 1; it < 3; it++, uv += velocity * _BlurSize) {
 				float4 currentColor = tex2D(_MainTex, uv);
-				color += currentColor;
+				c += currentColor;
 			}
-			color /= 3;
+			c /= 3;
 			
-			return fixed4(color.rgb, 1.0);
+			return fixed4(c.rgb, 1.0);
 		}
 		
 		ENDCG
-        
-        Pass {      
-        	ZTest Always Cull Off ZWrite Off
-        	    	
-            CGPROGRAM  
-            
-            #pragma vertex vert  
-            #pragma fragment frag  
-              
-            ENDCG  
-        }
+		
+		Pass {      
+			ZTest Always Cull Off ZWrite Off
+			    	
+			CGPROGRAM  
+			
+			#pragma vertex vert  
+			#pragma fragment frag  
+			  
+			ENDCG  
+		}
 	} 
 	FallBack Off
 }

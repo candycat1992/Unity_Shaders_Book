@@ -1,0 +1,571 @@
+fileFormatVersion: 2
+guid: f3a2a1abb417143c08f0442679aff010
+timeCreated: 1446864985
+licenseType: Free
+SubstanceImporter:
+  serializedVersion: 5
+  materialInstances:
+  - serializedVersion: 16
+    name: Cereals
+    prototypeName: Cereals
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: 
+    renderQueue: -1
+    lightmapFlags: 5
+    inputs:
+    - name: $normalformat
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: $outputsize
+      value:
+        scalar[0]: 8
+        scalar[1]: 8
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: $randomseed
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Hue_Shift
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Saturation
+      value:
+        scalar[0]: .5
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Luminosity
+      value:
+        scalar[0]: .5
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Emboss
+      value:
+        scalar[0]: 5
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Light_Angle
+      value:
+        scalar[0]: .125
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Contrast
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Normal
+      value:
+        scalar[0]: .5
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Depth
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Relief_Balance
+      value:
+        scalar[0]: 32
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Milk_Level
+      value:
+        scalar[0]: .5
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Colour_Variation
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Cereal_Type
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateMipmaps: 1
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+        data:
+          first:
+            name: _MainTex
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _BumpMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _DetailNormalMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _ParallaxMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _OcclusionMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _EmissionMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _DetailMask
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _DetailAlbedoMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _MetallicGlossMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+      floats:
+        data:
+          first:
+            name: _SrcBlend
+          second: 1
+        data:
+          first:
+            name: _DstBlend
+          second: 0
+        data:
+          first:
+            name: _Cutoff
+          second: .5
+        data:
+          first:
+            name: _Parallax
+          second: .0199999996
+        data:
+          first:
+            name: _ZWrite
+          second: 1
+        data:
+          first:
+            name: _Glossiness
+          second: .5
+        data:
+          first:
+            name: _BumpScale
+          second: 1
+        data:
+          first:
+            name: _OcclusionStrength
+          second: 1
+        data:
+          first:
+            name: _DetailNormalMapScale
+          second: 1
+        data:
+          first:
+            name: _UVSec
+          second: 0
+        data:
+          first:
+            name: _Mode
+          second: 0
+        data:
+          first:
+            name: _Metallic
+          second: 0
+      colors:
+        data:
+          first:
+            name: _EmissionColor
+          second: {r: 0, g: 0, b: 0, a: 1}
+        data:
+          first:
+            name: _Color
+          second: {r: 1, g: 1, b: 1, a: 1}
+    textureParameters:
+    - name: Cereals_Diffuse
+      alphaSource: 6
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: Cereals_Normal
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: Cereals_Height
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    textureAssignments:
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 3836037186
+    - shaderProp:
+        name: _BumpMap
+      material: {instanceID: 0}
+      baseUID: 3836037199
+    - shaderProp:
+        name: _ParallaxMap
+      material: {instanceID: 0}
+      baseUID: 3836037212
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  - serializedVersion: 16
+    name: Cereals_1
+    prototypeName: Cereals
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    shaderKeywords: 
+    renderQueue: -1
+    lightmapFlags: 5
+    inputs:
+    - name: $normalformat
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: $outputsize
+      value:
+        scalar[0]: 8
+        scalar[1]: 8
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: $randomseed
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Hue_Shift
+      value:
+        scalar[0]: .762000024
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Saturation
+      value:
+        scalar[0]: .5
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Luminosity
+      value:
+        scalar[0]: .5
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Emboss
+      value:
+        scalar[0]: 5
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Light_Angle
+      value:
+        scalar[0]: .125
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Contrast
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Normal
+      value:
+        scalar[0]: .5
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Depth
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Relief_Balance
+      value:
+        scalar[0]: 32
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Milk_Level
+      value:
+        scalar[0]: .5
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Colour_Variation
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Cereal_Type
+      value:
+        scalar[0]: 1.25999999
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    materialInformation:
+      serializedVersion: 5
+      offset: {x: 0, y: 0}
+      scale: {x: 1, y: 1}
+      generateMipmaps: 1
+      generateAllOutputs: 0
+      animationUpdateRate: 0
+    materialProperties:
+      serializedVersion: 2
+      texEnvs:
+        data:
+          first:
+            name: _MainTex
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _BumpMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _DetailNormalMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _ParallaxMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _OcclusionMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _EmissionMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _DetailMask
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _DetailAlbedoMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _MetallicGlossMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+      floats:
+        data:
+          first:
+            name: _SrcBlend
+          second: 1
+        data:
+          first:
+            name: _DstBlend
+          second: 0
+        data:
+          first:
+            name: _Cutoff
+          second: .5
+        data:
+          first:
+            name: _Parallax
+          second: .0199999996
+        data:
+          first:
+            name: _ZWrite
+          second: 1
+        data:
+          first:
+            name: _Glossiness
+          second: .5
+        data:
+          first:
+            name: _BumpScale
+          second: 1
+        data:
+          first:
+            name: _OcclusionStrength
+          second: 1
+        data:
+          first:
+            name: _DetailNormalMapScale
+          second: 1
+        data:
+          first:
+            name: _UVSec
+          second: 0
+        data:
+          first:
+            name: _Mode
+          second: 0
+        data:
+          first:
+            name: _Metallic
+          second: 0
+      colors:
+        data:
+          first:
+            name: _EmissionColor
+          second: {r: 0, g: 0, b: 0, a: 1}
+        data:
+          first:
+            name: _Color
+          second: {r: 1, g: 1, b: 1, a: 1}
+    textureParameters:
+    - name: Cereals_1_Diffuse
+      alphaSource: 6
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: Cereals_1_Normal
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: Cereals_1_Height
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    textureAssignments:
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 3836037186
+    - shaderProp:
+        name: _BumpMap
+      material: {instanceID: 0}
+      baseUID: 3836037199
+    - shaderProp:
+        name: _ParallaxMap
+      material: {instanceID: 0}
+      baseUID: 3836037212
+    buildTargetSettings:
+    - serializedVersion: 2
+      buildTarget: 
+      textureWidth: 512
+      textureHeight: 512
+      textureFormat: 0
+      loadingBehavior: 1
+  deletedPrototypes: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

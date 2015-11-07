@@ -1,11 +1,11 @@
 ﻿Shader "Unity Shaders Book/Chapter 11/Billboard" {
 	Properties {
-		_MainTex ("Main Tex (RGB)", 2D) = "white" {}
+		_MainTex ("Main Tex", 2D) = "white" {}
 		_Color ("Color Tint", Color) = (1, 1, 1, 1)
 		_VerticalBillboarding ("Vertical Restraints", Range(0, 1)) = 1 
 	}
 	SubShader {
-		// Need to disable batching because of the vertex animation in object space
+		// Need to disable batching because of the vertex animation
 		Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" "DisableBatching"="True"}
 		
 		Pass { 
@@ -16,8 +16,6 @@
 			Cull Off
 		
 			CGPROGRAM
-
-            #pragma multi_compile_fwdbase	
 			
 			#pragma vertex vert
 			#pragma fragment frag
@@ -79,5 +77,5 @@
 			ENDCG
 		}
 	} 
-	FallBack "Diffuse"
+	FallBack "Transparent/VertexLit"
 }

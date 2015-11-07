@@ -22,13 +22,13 @@
 		
 		sampler2D _CameraDepthNormalsTexture;
 		uniform half4 _CameraDepthNormalsTexture_TexelSize;
-        
-        struct v2f {
-        	float4 pos : SV_POSITION;
-        	half2 uv[5]: TEXCOORD0;
-        };
-          
-        v2f vert(appdata_img v) {
+		
+		struct v2f {
+			float4 pos : SV_POSITION;
+			half2 uv[5]: TEXCOORD0;
+		};
+		  
+		v2f vert(appdata_img v) {
 			v2f o;
 			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 			
@@ -47,13 +47,13 @@
 					 
 			return o;
 		}
-        
-        half CheckSame(half4 center, half4 sample) {
-        	half2 centerNormal = center.xy;
-        	float centerDepth = DecodeFloatRG(center.zw);
-        	half2 sampleNormal = sample.xy;
-        	float sampleDepth = DecodeFloatRG(sample.zw);
-        	
+		
+		half CheckSame(half4 center, half4 sample) {
+			half2 centerNormal = center.xy;
+			float centerDepth = DecodeFloatRG(center.zw);
+			half2 sampleNormal = sample.xy;
+			float sampleDepth = DecodeFloatRG(sample.zw);
+			
 			// difference in normals
 			// do not bother decoding normals - there's no need here
 			half2 diffNormal = abs(centerNormal - sampleNormal) * _Sensitivity.x;
@@ -62,42 +62,42 @@
 			float diffDepth = abs(centerDepth - sampleDepth) * _Sensitivity.y;
 			// scale the required threshold by the distance
 			int isSameDepth = diffDepth < 0.1 * centerDepth;
-		
+			
 			// return:
 			// 1 - if normals and depth are similar enough
 			// 0 - otherwise
 			return isSameNormal * isSameDepth ? 1.0 : 0.0;
-		}	
-	
-        fixed4 fragRobertsCrossDepthAndNormal(v2f i) : SV_Target {
-        	half4 sample1 = tex2D(_CameraDepthNormalsTexture, i.uv[1]);
+		}
+		
+		fixed4 fragRobertsCrossDepthAndNormal(v2f i) : SV_Target {
+			half4 sample1 = tex2D(_CameraDepthNormalsTexture, i.uv[1]);
 			half4 sample2 = tex2D(_CameraDepthNormalsTexture, i.uv[2]);
 			half4 sample3 = tex2D(_CameraDepthNormalsTexture, i.uv[3]);
 			half4 sample4 = tex2D(_CameraDepthNormalsTexture, i.uv[4]);
-
+			
 			half edge = 1.0;
 			
 			edge *= CheckSame(sample1, sample2);
 			edge *= CheckSame(sample3, sample4);
-
+			
 			fixed4 withEdgeColor = lerp(_EdgeColor, tex2D(_MainTex, i.uv[0]), edge);
 			fixed4 onlyEdgeColor = lerp(_EdgeColor, _BackgroundColor, edge);
 			
 			return lerp(withEdgeColor, onlyEdgeColor, _EdgeOnly);
-        }
+		}
 		
 		ENDCG
 		
 		Pass { 
 			ZTest Always Cull Off ZWrite Off
 			
-            CGPROGRAM      
-   
-            #pragma vertex vert  
-            #pragma fragment fragRobertsCrossDepthAndNormal
- 
-            ENDCG  
-        }
+			CGPROGRAM      
+			
+			#pragma vertex vert  
+			#pragma fragment fragRobertsCrossDepthAndNormal
+			
+			ENDCG  
+		}
 	} 
 	FallBack Off
 }

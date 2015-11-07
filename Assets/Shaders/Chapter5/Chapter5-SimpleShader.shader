@@ -1,6 +1,6 @@
-﻿Shader "Unity Shader Book/Chapter5-SimpleShader" {
+﻿Shader "Unity Shaders Book/Chapter 5/Simple Shader" {
 	Properties {
-		_Color ("Color Tint", Color) = (1.0,1.0,1.0,1.0)
+		_Color ("Color Tint", Color) = (1, 1, 1, 1)
 	}
 	SubShader {
         Pass {

@@ -36,13 +36,13 @@
 		}
 		
 		fixed luminance(fixed4 color) {
- 			return  0.2125 * color.r + 0.7154 * color.g + 0.0721 * color.b; 
+			return  0.2125 * color.r + 0.7154 * color.g + 0.0721 * color.b; 
 		}
 		
 		fixed4 fragExtractBright(v2f i) : SV_Target {
 			fixed4 c = tex2D(_MainTex, i.uv);
 			fixed val = clamp(luminance(c) - _LuminanceThreshold, 0.0, 1.0);
-
+			
 			return c * val;
 		}
 		
@@ -55,14 +55,14 @@
 			v2fBloom o;
 			
 			o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
-        	o.uv.xy = v.texcoord;		
-        	o.uv.zw = v.texcoord;
-        	
-        #if UNITY_UV_STARTS_AT_TOP			
-        	if (_MainTex_TexelSize.y < 0.0)
-        		o.uv.y = 1.0 - o.uv.y;
-        #endif
-        	        	
+			o.uv.xy = v.texcoord;		
+			o.uv.zw = v.texcoord;
+			
+			#if UNITY_UV_STARTS_AT_TOP			
+			if (_MainTex_TexelSize.y < 0.0)
+				o.uv.y = 1.0 - o.uv.y;
+			#endif
+				        	
 			return o; 
 		}
 		
@@ -75,25 +75,24 @@
 		ZTest Always Cull Off ZWrite Off
 		
 		Pass {  
-            CGPROGRAM  
-            #pragma vertex vertExtractBright  
-            #pragma fragment fragExtractBright  
-   
-            ENDCG  
-        }
-        
-        UsePass "Unity Shaders Book/Chapter 12/Gaussian Blur/GAUSSIAN_BLUR_VERTICAL"
-        
-        UsePass "Unity Shaders Book/Chapter 12/Gaussian Blur/GAUSSIAN_BLUR_HORIZONTAL"
-        
-        Pass {  
-            CGPROGRAM  
-            #pragma vertex vertBloom  
-            #pragma fragment fragBloom  
-   
-            ENDCG  
-        }
-	} 
-	
+			CGPROGRAM  
+			#pragma vertex vertExtractBright  
+			#pragma fragment fragExtractBright  
+			
+			ENDCG  
+		}
+		
+		UsePass "Unity Shaders Book/Chapter 12/Gaussian Blur/GAUSSIAN_BLUR_VERTICAL"
+		
+		UsePass "Unity Shaders Book/Chapter 12/Gaussian Blur/GAUSSIAN_BLUR_HORIZONTAL"
+		
+		Pass {  
+			CGPROGRAM  
+			#pragma vertex vertBloom  
+			#pragma fragment fragBloom  
+			
+			ENDCG  
+		}
+	}
 	FallBack Off
 }

@@ -1,13 +1,13 @@
-﻿Shader "Unity Shader Book/Chapter6-SpecularVertexLevel" {
+﻿Shader "Unity Shaders Book/Chapter 6/Specular Vertex-Level" {
 	Properties {
 		_Diffuse ("Diffuse", Color) = (1, 1, 1, 1)
 		_Specular ("Specular", Color) = (1, 1, 1, 1)
-		_Gloss ("Gloss", Float) = 20
+		_Gloss ("Gloss", Range(8.0, 256)) = 20
 	}
 	SubShader {
 		Pass { 
 			Tags { "LightMode"="ForwardBase" }
-		
+			
 			CGPROGRAM
 			
 			#pragma vertex vert
@@ -25,37 +25,37 @@
 			};
 			
 			struct v2f {
-				float4 position : SV_POSITION;
+				float4 pos : SV_POSITION;
 				fixed3 color : COLOR;
 			};
 			
 			v2f vert(a2v v) {
-			 	v2f o;
-			 	// Transform the vertex from object space to projection space
-			 	o.position = mul(UNITY_MATRIX_MVP, v.vertex);
-			 	
-			 	// Get ambient term
+				v2f o;
+				// Transform the vertex from object space to projection space
+				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				
+				// Get ambient term
 				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
-			 	
-			 	// Transform the normal fram object space to world space
-			 	fixed3 worldNormal = normalize(mul(v.normal, (float3x3)_World2Object));
-			 	// Get the light direction in world space
-			 	fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
-			 	
-			 	// Compute diffuse term
-			 	fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
-			 	
-			 	// Get the reflect direction in world space
-			 	fixed3 reflectDir = normalize(reflect(-worldLightDir, worldNormal));
-			 	// Get the view direction in world space
-			 	fixed3 viewDir = normalize(_WorldSpaceCameraPos.xyz - mul(_Object2World, v.vertex).xyz);
-			 	
-			 	// Compute specular term
-			 	fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(saturate(dot(reflectDir, viewDir)), _Gloss);
-			 	
-			 	o.color = ambient + diffuse + specular;
-			 				 	
-			 	return o;
+				
+				// Transform the normal fram object space to world space
+				fixed3 worldNormal = normalize(mul(v.normal, (float3x3)_World2Object));
+				// Get the light direction in world space
+				fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
+				
+				// Compute diffuse term
+				fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
+				
+				// Get the reflect direction in world space
+				fixed3 reflectDir = normalize(reflect(-worldLightDir, worldNormal));
+				// Get the view direction in world space
+				fixed3 viewDir = normalize(_WorldSpaceCameraPos.xyz - mul(_Object2World, v.vertex).xyz);
+				
+				// Compute specular term
+				fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(saturate(dot(reflectDir, viewDir)), _Gloss);
+				
+				o.color = ambient + diffuse + specular;
+							 	
+				return o;
 			}
 			
 			fixed4 frag(v2f i) : SV_Target {
@@ -65,5 +65,5 @@
 			ENDCG
 		}
 	} 
-	FallBack "Diffuse"
+	FallBack "Specular"
 }

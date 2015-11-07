@@ -38,7 +38,7 @@
 			if (_MainTex_TexelSize.y < 0)
 				uv.y = 1 - uv.y;
 			#endif
-
+			
 			int index = 0;
 			if (v.texcoord.x < 0.5 && v.texcoord.y < 0.5) {
 				index = 0;
@@ -64,22 +64,22 @@
 			
 			fixed4 finalColor = tex2D(_MainTex, i.uv);
 			finalColor.rgb = lerp(finalColor.rgb, _FogColor.rgb, fogDensity);
-
+			
 			return finalColor;
 		}
 		
 		ENDCG
-        
-        Pass {
-        	ZTest Always Cull Off ZWrite Off
-        	     	
-            CGPROGRAM  
-            
-            #pragma vertex vert  
-            #pragma fragment frag  
-              
-            ENDCG  
-        }
+		
+		Pass {
+			ZTest Always Cull Off ZWrite Off
+			     	
+			CGPROGRAM  
+			
+			#pragma vertex vert  
+			#pragma fragment frag  
+			  
+			ENDCG  
+		}
 	} 
 	FallBack Off
 }

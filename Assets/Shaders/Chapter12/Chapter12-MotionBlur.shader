@@ -49,23 +49,22 @@
 			CGPROGRAM
 			
 			#pragma vertex vert  
-            #pragma fragment fragRGB  
+			#pragma fragment fragRGB  
 			
 			ENDCG
 		}
-        
-        Pass {   
-        	Blend One Zero
+		
+		Pass {   
+			Blend One Zero
 			ColorMask A
 			   	
-            CGPROGRAM  
-            
-            #pragma vertex vert  
-            #pragma fragment fragA
-              
-            ENDCG  
-        }
-	} 
-	
+			CGPROGRAM  
+			
+			#pragma vertex vert  
+			#pragma fragment fragA
+			  
+			ENDCG
+		}
+	}
  	FallBack Off
 }

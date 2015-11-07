@@ -1,16 +1,12 @@
-﻿Shader "Unity Shader Book/Chapter6-DiffusePixelLevel" {
+﻿Shader "Unity Shaders Book/Chapter 6/Diffuse Pixel-Level" {
 	Properties {
 		_Diffuse ("Diffuse", Color) = (1, 1, 1, 1)
 	}
 	SubShader {
-		Tags { "RenderType"="Opaque" }
-		
 		Pass { 
 			Tags { "LightMode"="ForwardBase" }
 		
 			CGPROGRAM
-			
-			#pragma multi_compile_fwbase
 			
 			#pragma vertex vert
 			#pragma fragment frag
@@ -30,30 +26,30 @@
 			};
 			
 			v2f vert(a2v v) {
-			 	v2f o;
-			 	// Transform the vertex from object space to projection space
-			 	o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-			 	
-			 	// Transform the normal fram object space to world space
-			 	o.worldNormal = mul(v.normal, (float3x3)_World2Object);
-			 	
-			 	return o;
+				v2f o;
+				// Transform the vertex from object space to projection space
+				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+
+				// Transform the normal fram object space to world space
+				o.worldNormal = mul(v.normal, (float3x3)_World2Object);
+
+				return o;
 			}
 			
 			fixed4 frag(v2f i) : SV_Target {
 				// Get ambient term
 				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
 				
+				// Get the normal in world space
 				fixed3 worldNormal = normalize(i.worldNormal);
-				
 				// Get the light direction in world space
-			 	fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
+				fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
 				
 				// Compute diffuse term
-			 	fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
-			 	
-			 	fixed3 color = ambient + diffuse;
-			 	
+				fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
+				
+				fixed3 color = ambient + diffuse;
+				
 				return fixed4(color, 1.0);
 			}
 			

@@ -1,4 +1,4 @@
-﻿Shader "Custom/MyShader" {
+﻿Shader "Unity Shaders Book/Chapter 3/MyShader" {
 	Properties {
 		// Numbers and Sliders
 		_Int ("Int", Int) = 2
@@ -13,13 +13,9 @@
 		_3D ("3D", 3D) = "black" {}
 	}
 
-	SubShader {
-		// Optional
-		Tags {"PreviewType" = "Sphere"}
-				
+	SubShader {				
 		Pass {
 		}
-		// Other Passes
 	}
 
 	FallBack "Diffuse"
