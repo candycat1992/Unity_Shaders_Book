@@ -9,7 +9,7 @@
 	SubShader {
 		Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
 		
-        Pass {
+		Pass {
 			Tags { "LightMode"="ForwardBase" }
 			
 			ZWrite Off
@@ -64,8 +64,8 @@
 				return c;
 			}
 			
-			ENDCG   
-        }  
+			ENDCG
+		}  
 	}
 	FallBack "Transparent/VertexLit"
 }

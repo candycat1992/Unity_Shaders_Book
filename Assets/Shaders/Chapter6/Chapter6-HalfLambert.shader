@@ -26,14 +26,14 @@
 			};
 			
 			v2f vert(a2v v) {
-			v2f o;
-			// Transform the vertex from object space to projection space
-			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-			
-			// Transform the normal fram object space to world space
-			o.worldNormal = mul(v.normal, (float3x3)_World2Object);
-			
-			return o;
+				v2f o;
+				// Transform the vertex from object space to projection space
+				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				
+				// Transform the normal fram object space to world space
+				o.worldNormal = mul(v.normal, (float3x3)_World2Object);
+				
+				return o;
 			}
 			
 			fixed4 frag(v2f i) : SV_Target {

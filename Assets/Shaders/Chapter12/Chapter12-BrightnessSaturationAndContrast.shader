@@ -9,23 +9,23 @@
 		Pass {  
 			ZTest Always Cull Off ZWrite Off
 			
-            CGPROGRAM  
-            #pragma vertex vert  
-            #pragma fragment frag  
-              
-            #include "UnityCG.cginc"  
-              
-            sampler2D _MainTex;  
-            half _Brightness;
-            half _Saturation;
-            half _Contrast;
-              
-            struct v2f {
-	        	float4 pos : SV_POSITION;
-	        	half2 uv: TEXCOORD0;
-	        };
-	          
-	        v2f vert(appdata_img v) {
+			CGPROGRAM  
+			#pragma vertex vert  
+			#pragma fragment frag  
+			  
+			#include "UnityCG.cginc"  
+			  
+			sampler2D _MainTex;  
+			half _Brightness;
+			half _Saturation;
+			half _Contrast;
+			  
+			struct v2f {
+				float4 pos : SV_POSITION;
+				half2 uv: TEXCOORD0;
+			};
+			  
+			v2f vert(appdata_img v) {
 				v2f o;
 				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 				
@@ -57,8 +57,8 @@
 				return fixed4(finalColor, renderTex.a);  
 			}  
 			  
-			ENDCG  
-        }  
+			ENDCG
+		}  
 	}
 	
 	Fallback Off

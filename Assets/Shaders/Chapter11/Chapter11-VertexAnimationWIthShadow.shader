@@ -108,7 +108,7 @@
 			    SHADOW_CASTER_FRAGMENT(i)
 			}
 			ENDCG
-        }
+		}
 	}
 	FallBack "VertexLit"
 }

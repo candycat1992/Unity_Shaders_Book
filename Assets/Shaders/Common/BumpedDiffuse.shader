@@ -37,30 +37,30 @@
 				float4 pos : SV_POSITION;
 				float4 uv : TEXCOORD0;
 				float4 TtoW0 : TEXCOORD1;  
-                float4 TtoW1 : TEXCOORD2;  
-                float4 TtoW2 : TEXCOORD3;
+				float4 TtoW1 : TEXCOORD2;  
+				float4 TtoW2 : TEXCOORD3;
 				SHADOW_COORDS(4)
 			};
 			
 			v2f vert(a2v v) {
-			 	v2f o;
-			 	o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-			 
-			 	o.uv.xy = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-			 	o.uv.zw = v.texcoord.xy * _BumpMap_ST.xy + _BumpMap_ST.zw;
-	
+				v2f o;
+				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				
+				o.uv.xy = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
+				o.uv.zw = v.texcoord.xy * _BumpMap_ST.xy + _BumpMap_ST.zw;
+				
 				float3 worldPos = mul(_Object2World, v.vertex).xyz;  
-                fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);  
-                fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);  
-                fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w; 
-	
-  				o.TtoW0 = float4(worldTangent.x, worldBinormal.x, worldNormal.x, worldPos.x);
-			  	o.TtoW1 = float4(worldTangent.y, worldBinormal.y, worldNormal.y, worldPos.y);
-			  	o.TtoW2 = float4(worldTangent.z, worldBinormal.z, worldNormal.z, worldPos.z);  
-			 	
-			 	TRANSFER_SHADOW(o);
-			 	
-			 	return o;
+				fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);  
+				fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);  
+				fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w; 
+				
+				o.TtoW0 = float4(worldTangent.x, worldBinormal.x, worldNormal.x, worldPos.x);
+				o.TtoW1 = float4(worldTangent.y, worldBinormal.y, worldNormal.y, worldPos.y);
+				o.TtoW2 = float4(worldTangent.z, worldBinormal.z, worldNormal.z, worldPos.z);  
+				
+				TRANSFER_SHADOW(o);
+				
+				return o;
 			}
 			
 			fixed4 frag(v2f i) : SV_Target {
@@ -119,30 +119,30 @@
 				float4 pos : SV_POSITION;
 				float4 uv : TEXCOORD0;
 				float4 TtoW0 : TEXCOORD1;  
-                float4 TtoW1 : TEXCOORD2;  
-                float4 TtoW2 : TEXCOORD3;
+				float4 TtoW1 : TEXCOORD2;  
+				float4 TtoW2 : TEXCOORD3;
 				SHADOW_COORDS(4)
 			};
 			
 			v2f vert(a2v v) {
-			 	v2f o;
-			 	o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-			 
-			 	o.uv.xy = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-			 	o.uv.zw = v.texcoord.xy * _BumpMap_ST.xy + _BumpMap_ST.zw;
-	
+				v2f o;
+				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				
+				o.uv.xy = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
+				o.uv.zw = v.texcoord.xy * _BumpMap_ST.xy + _BumpMap_ST.zw;
+				
 				float3 worldPos = mul(_Object2World, v.vertex).xyz;  
-                fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);  
-                fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);  
-                fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w; 
-	
-  				o.TtoW0 = float4(worldTangent.x, worldBinormal.x, worldNormal.x, worldPos.x);
-			  	o.TtoW1 = float4(worldTangent.y, worldBinormal.y, worldNormal.y, worldPos.y);
-			  	o.TtoW2 = float4(worldTangent.z, worldBinormal.z, worldNormal.z, worldPos.z);  
-			 	
-			 	TRANSFER_SHADOW(o);
-			 	
-			 	return o;
+				fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);  
+				fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);  
+				fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w; 
+				
+				o.TtoW0 = float4(worldTangent.x, worldBinormal.x, worldNormal.x, worldPos.x);
+				o.TtoW1 = float4(worldTangent.y, worldBinormal.y, worldNormal.y, worldPos.y);
+				o.TtoW2 = float4(worldTangent.z, worldBinormal.z, worldNormal.z, worldPos.z);  
+				
+				TRANSFER_SHADOW(o);
+				
+				return o;
 			}
 			
 			fixed4 frag(v2f i) : SV_Target {

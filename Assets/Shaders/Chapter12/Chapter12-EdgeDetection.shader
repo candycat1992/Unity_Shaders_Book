@@ -85,9 +85,8 @@
 				return lerp(withEdgeColor, onlyEdgeColor, _EdgeOnly);
  			}
 			
-			ENDCG  
-        } 
-	} 
-	
+			ENDCG
+		} 
+	}
 	FallBack Off
 }

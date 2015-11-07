@@ -12,7 +12,7 @@
 		
 			CGPROGRAM
 			
-            #pragma multi_compile_fwdbase
+			#pragma multi_compile_fwdbase
 			
 			#pragma vertex vert
 			#pragma fragment frag
