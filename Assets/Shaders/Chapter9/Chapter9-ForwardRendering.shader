@@ -77,8 +77,6 @@
 			
 			// Apparently need to add this declaration
 			#pragma multi_compile_fwdadd
-			// Use the line below to add shadows for point and spot lights
-//			#pragma multi_compile_fwdadd_fullshadows
 			
 			#pragma vertex vert
 			#pragma fragment frag

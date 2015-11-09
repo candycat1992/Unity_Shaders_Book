@@ -11,12 +11,12 @@
 		
 		CGPROGRAM
 		
-		// surf - which Cg function has surface shader code.
-		// CustomLambert - which lighting model to use
+		// surf - which surface function.
+		// CustomLambert - which lighting model to use.
 		// vertex:myvert - use custom vertex modification function.
 		// finalcolor:mycolor - use custom final color modification function.
 		// addshadow - generate a shadow caster pass. Because we modify the vertex position, the shder needs special shadows handling.
-		// exclude_path:deferred/exclude_path:prepas - no not generate passes for deferred/legacy deferred rendering path.
+		// exclude_path:deferred/exclude_path:prepas - do not generate passes for deferred/legacy deferred rendering path.
 		// nometa - do not generate a “meta” pass (that’s used by lightmapping & dynamic global illumination to extract surface information).
 		#pragma surface surf CustomLambert vertex:myvert finalcolor:mycolor addshadow exclude_path:deferred exclude_path:prepass nometa
 		#pragma target 3.0

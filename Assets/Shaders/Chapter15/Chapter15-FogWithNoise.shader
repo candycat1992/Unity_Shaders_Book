@@ -30,8 +30,8 @@
 		
 		struct v2f {
 			float4 pos : SV_POSITION;
-			half2 uv : TEXCOORD0;
-			half2 uv_depth : TEXCOORD1;
+			float2 uv : TEXCOORD0;
+			float2 uv_depth : TEXCOORD1;
 			float4 interpolatedRay : TEXCOORD2;
 		};
 		
@@ -46,7 +46,7 @@
 			if (_MainTex_TexelSize.y < 0)
 				uv.y = 1 - uv.y;
 			#endif
-
+			
 			int index = 0;
 			if (v.texcoord.x < 0.5 && v.texcoord.y < 0.5) {
 				index = 0;
@@ -80,15 +80,15 @@
 		}
 		
 		ENDCG
-        
-        Pass {          	
-            CGPROGRAM  
-            
-            #pragma vertex vert  
-            #pragma fragment frag  
-              
-            ENDCG  
-        }
+		
+		Pass {          	
+			CGPROGRAM  
+			
+			#pragma vertex vert  
+			#pragma fragment frag  
+			  
+			ENDCG
+		}
 	} 
-	FallBack "Diffuse"
+	FallBack Off
 }

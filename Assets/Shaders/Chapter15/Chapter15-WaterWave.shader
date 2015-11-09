@@ -53,8 +53,8 @@
 				float4 scrPos : TEXCOORD0;
 				float4 uv : TEXCOORD1;
 				float4 TtoW0 : TEXCOORD2;  
-                float4 TtoW1 : TEXCOORD3;  
-                float4 TtoW2 : TEXCOORD4; 
+				float4 TtoW1 : TEXCOORD3;  
+				float4 TtoW2 : TEXCOORD4; 
 			};
 			
 			v2f vert(a2v v) {
@@ -67,13 +67,13 @@
 				o.uv.zw = TRANSFORM_TEX(v.texcoord, _WaveMap);
 				
 				float3 worldPos = mul(_Object2World, v.vertex).xyz;  
-                fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);  
-                fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);  
-                fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w; 
-                
-                o.TtoW0 = float4(worldTangent.x, worldBinormal.x, worldNormal.x, worldPos.x);  
-                o.TtoW1 = float4(worldTangent.y, worldBinormal.y, worldNormal.y, worldPos.y);  
-                o.TtoW2 = float4(worldTangent.z, worldBinormal.z, worldNormal.z, worldPos.z);  
+				fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);  
+				fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);  
+				fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w; 
+				
+				o.TtoW0 = float4(worldTangent.x, worldBinormal.x, worldNormal.x, worldPos.x);  
+				o.TtoW1 = float4(worldTangent.y, worldBinormal.y, worldNormal.y, worldPos.y);  
+				o.TtoW2 = float4(worldTangent.z, worldBinormal.z, worldNormal.z, worldPos.z);  
 				
 				return o;
 			}
@@ -91,7 +91,7 @@
 				// Compute the offset in tangent space
 				float2 offset = bump.xy * _Distortion * _RefractionTex_TexelSize.xy;
 				i.scrPos.xy = offset * i.scrPos.z + i.scrPos.xy;
-				fixed3 refrCol = tex2Dproj( _RefractionTex, UNITY_PROJ_COORD(i.scrPos)).rgb;
+				fixed3 refrCol = tex2D( _RefractionTex, i.scrPos.xy/i.scrPos.w).rgb;
 				
 				// Convert the normal to world space
 				bump = normalize(half3(dot(i.TtoW0.xyz, bump), dot(i.TtoW1.xyz, bump), dot(i.TtoW2.xyz, bump)));
@@ -100,16 +100,14 @@
 				fixed3 reflCol = texCUBE(_Cubemap, reflDir).rgb * texColor.rgb * _Color.rgb;
 				
 				fixed fresnel = pow(1 - saturate(dot(viewDir, bump)), 4);
-				fixed refrFactor = 1 - fresnel;
-				fixed3 finalColor = reflCol * (1 - refrFactor) + refrCol * refrFactor;
-
+				fixed3 finalColor = reflCol * fresnel + refrCol * (1 - fresnel);
+				
 				return fixed4(finalColor, 1);
 			}
 			
 			ENDCG
 		}
 	}
-	
 	// Do not cast shadow
-//	FallBack "Diffuse"
+	FallBack Off
 }

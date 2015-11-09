@@ -9,7 +9,7 @@
 		_BurnMap("Burn Map", 2D) = "white"{}
 	}
 	SubShader {
-		Tags { "RenderType"="Opaque" }
+		Tags { "RenderType"="Opaque" "Queue"="Geometry"}
 		
 		Pass {
 			Tags { "LightMode"="ForwardBase" }
@@ -18,7 +18,6 @@
 			
 			CGPROGRAM
 			
-			#include "UnityCG.cginc"
 			#include "Lighting.cginc"
 			#include "AutoLight.cginc"
 			
@@ -81,14 +80,13 @@
 				
 				float3 tangentLightDir = normalize(i.lightDir);
 				fixed3 tangentNormal = UnpackNormal(tex2D(_BumpMap, i.uvBumpMap));
+				
+				fixed3 albedo = tex2D(_MainTex, i.uvMainTex).rgb;
+				
+				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz * albedo;
+				
+				fixed3 diffuse = _LightColor0.rgb * albedo * max(0, dot(tangentNormal, tangentLightDir));
 
-				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
-				
-				fixed diff = saturate(dot(tangentNormal, tangentLightDir));
-				
-				fixed3 texColor = tex2D (_MainTex, i.uvMainTex).rgb;
-				fixed3 diffuse = _LightColor0.rgb * texColor * diff;
-				
 				fixed t = 1 - smoothstep(0.0, _LineWidth, burn.r - _BurnAmount);
 				fixed3 burnColor = lerp(_BurnFirstColor, _BurnSecondColor, t);
 				burnColor = pow(burnColor, 5);
@@ -103,53 +101,46 @@
 		}
 		
 		// Pass to render object as a shadow caster
-        Pass {
-            Tags { "LightMode" = "ShadowCaster" }
-            
-            CGPROGRAM
-            
-            #pragma vertex vert
-            #pragma fragment frag
-            
-            #pragma multi_compile_shadowcaster
-            
-            #include "UnityCG.cginc"
-
-            fixed _BurnAmount;
+		Pass {
+			Tags { "LightMode" = "ShadowCaster" }
+			
+			CGPROGRAM
+			
+			#pragma vertex vert
+			#pragma fragment frag
+			
+			#pragma multi_compile_shadowcaster
+			
+			#include "UnityCG.cginc"
+			
+			fixed _BurnAmount;
 			sampler2D _BurnMap;
 			float4 _BurnMap_ST;
-            
-            struct a2v {
-                float4 vertex : POSITION;
-                float4 texcoord : TEXCOORD0;
-            };
-
-            struct v2f {
-                V2F_SHADOW_CASTER;
-                float2 uvBurnMap : TEXCOORD1;
-            };
-            
-            v2f vert(a2v v) {
-            	v2f o;
-            	
-            	o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-            	o.pos = UnityApplyLinearShadowBias(o.pos);
+			
+			struct v2f {
+				V2F_SHADOW_CASTER;
+				float2 uvBurnMap : TEXCOORD1;
+			};
+			
+			v2f vert(appdata_base v) {
+				v2f o;
+				
+				TRANSFER_SHADOW_CASTER_NORMALOFFSET(o)
 				
 				o.uvBurnMap = TRANSFORM_TEX(v.texcoord, _BurnMap);
-            	
-            	return o;
-            }
-
-            fixed4 frag(v2f i) : SV_Target {
-            	fixed3 burn = tex2D(_BurnMap, i.uvBurnMap).rgb;
+				
+				return o;
+			}
+			
+			fixed4 frag(v2f i) : SV_Target {
+				fixed3 burn = tex2D(_BurnMap, i.uvBurnMap).rgb;
 				
 				clip(burn.r - _BurnAmount);
 				
-                SHADOW_CASTER_FRAGMENT(i)
-            }
-            ENDCG
-        }
+				SHADOW_CASTER_FRAGMENT(i)
+			}
+			ENDCG
+		}
 	}
-	
 	FallBack "Diffuse"
 }
