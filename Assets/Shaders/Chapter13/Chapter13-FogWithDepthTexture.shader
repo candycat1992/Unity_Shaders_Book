@@ -14,6 +14,7 @@
 		float4x4 _FrustumCornersRay;
 		
 		sampler2D _MainTex;
+		half4 _MainTex_TexelSize;
 		sampler2D _CameraDepthTexture;
 		half _FogDensity;
 		fixed4 _FogColor;
@@ -36,7 +37,7 @@
 			
 			#if UNITY_UV_STARTS_AT_TOP
 			if (_MainTex_TexelSize.y < 0)
-				uv.y = 1 - uv.y;
+				o.uv_depth.y = 1 - o.uv_depth.y;
 			#endif
 			
 			int index = 0;
@@ -49,6 +50,11 @@
 			} else {
 				index = 3;
 			}
+
+			#if UNITY_UV_STARTS_AT_TOP
+			if (_MainTex_TexelSize.y < 0)
+				index = 3 - index;
+			#endif
 			
 			o.interpolatedRay = _FrustumCornersRay[index];
 				 	 
@@ -56,7 +62,7 @@
 		}
 		
 		fixed4 frag(v2f i) : SV_Target {
-			float linearDepth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv));
+			float linearDepth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv_depth));
 			float3 worldPos = _WorldSpaceCameraPos + linearDepth * i.interpolatedRay.xyz;
 						
 			float fogDensity = (_FogEnd - worldPos.y) / (_FogEnd - _FogStart); 

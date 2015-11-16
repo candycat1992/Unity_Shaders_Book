@@ -9,6 +9,7 @@
 		#include "UnityCG.cginc"
 		
 		sampler2D _MainTex;
+		half4 _MainTex_TexelSize;
 		sampler2D _CameraDepthTexture;
 		float4x4 _CurrentViewProjectionInverseMatrix;
 		float4x4 _PreviousViewProjectionMatrix;
@@ -29,7 +30,7 @@
 			
 			#if UNITY_UV_STARTS_AT_TOP
 			if (_MainTex_TexelSize.y < 0)
-				uv.y = 1 - uv.y;
+				o.uv_depth.y = 1 - o.uv_depth.y;
 			#endif
 					 
 			return o;

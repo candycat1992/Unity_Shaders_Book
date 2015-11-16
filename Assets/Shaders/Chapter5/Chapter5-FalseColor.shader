@@ -13,7 +13,7 @@
 				fixed4 color : COLOR0;
 			};
 			
-			v2f vert(appdata_full v) : SV_POSITION {
+			v2f vert(appdata_full v) {
 				v2f o;
 				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 				

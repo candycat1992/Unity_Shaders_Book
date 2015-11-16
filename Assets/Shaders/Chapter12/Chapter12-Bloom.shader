@@ -11,7 +11,7 @@
 		#include "UnityCG.cginc"
 		
 		sampler2D _MainTex;
-		uniform half4 _MainTex_TexelSize;
+		half4 _MainTex_TexelSize;
 		sampler2D _Bloom;
 		float _LuminanceThreshold;
 		float _BlurSize;
@@ -23,14 +23,10 @@
 		
 		v2f vertExtractBright(appdata_img v) {
 			v2f o;
+			
 			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 			
 			o.uv = v.texcoord;
-			
-			#if UNITY_UV_STARTS_AT_TOP
-			if (_MainTex_TexelSize.y < 0)
-				uv.y = 1 - uv.y;
-			#endif
 					 
 			return o;
 		}
@@ -60,7 +56,7 @@
 			
 			#if UNITY_UV_STARTS_AT_TOP			
 			if (_MainTex_TexelSize.y < 0.0)
-				o.uv.y = 1.0 - o.uv.y;
+				o.uv.w = 1.0 - o.uv.w;
 			#endif
 				        	
 			return o; 

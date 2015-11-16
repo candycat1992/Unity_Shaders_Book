@@ -1,4 +1,4 @@
-﻿Shader "Unity Shaders Book/Chapter 12/Edge Detection Normals And Depth" {
+﻿Shader "Unity Shaders Book/Chapter 13/Edge Detection Normals And Depth" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
 		_EdgeOnly ("Edge Only", Float) = 1.0
@@ -13,7 +13,7 @@
 		#include "UnityCG.cginc"
 		
 		sampler2D _MainTex;
-		uniform half4 _MainTex_TexelSize;
+		half4 _MainTex_TexelSize;
 		fixed _EdgeOnly;
 		fixed4 _EdgeColor;
 		fixed4 _BackgroundColor;
@@ -21,7 +21,6 @@
 		half4 _Sensitivity;
 		
 		sampler2D _CameraDepthNormalsTexture;
-		uniform half4 _CameraDepthNormalsTexture_TexelSize;
 		
 		struct v2f {
 			float4 pos : SV_POSITION;
@@ -37,13 +36,13 @@
 			
 			#if UNITY_UV_STARTS_AT_TOP
 			if (_MainTex_TexelSize.y < 0)
-				o.uv[0].y = 1 - o.uv[0];
+				uv.y = 1 - uv.y;
 			#endif
 			
-			o.uv[1] = uv + _CameraDepthNormalsTexture_TexelSize.xy * half2(1,1) * _SampleDistance;
-			o.uv[2] = uv + _CameraDepthNormalsTexture_TexelSize.xy * half2(-1,-1) * _SampleDistance;
-			o.uv[3] = uv + _CameraDepthNormalsTexture_TexelSize.xy * half2(-1,1) * _SampleDistance;
-			o.uv[4] = uv + _CameraDepthNormalsTexture_TexelSize.xy * half2(1,-1) * _SampleDistance;
+			o.uv[1] = uv + _MainTex_TexelSize.xy * half2(1,1) * _SampleDistance;
+			o.uv[2] = uv + _MainTex_TexelSize.xy * half2(-1,-1) * _SampleDistance;
+			o.uv[3] = uv + _MainTex_TexelSize.xy * half2(-1,1) * _SampleDistance;
+			o.uv[4] = uv + _MainTex_TexelSize.xy * half2(1,-1) * _SampleDistance;
 					 
 			return o;
 		}

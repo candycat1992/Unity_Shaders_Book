@@ -9,7 +9,7 @@
 		#include "UnityCG.cginc"
 		
 		sampler2D _MainTex;  
-		uniform half4 _MainTex_TexelSize;
+		half4 _MainTex_TexelSize;
 		float _BlurSize;
 		  
 		struct v2f {
@@ -22,11 +22,6 @@
 			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 			
 			half2 uv = v.texcoord;
-			
-			#if UNITY_UV_STARTS_AT_TOP
-			if (_MainTex_TexelSize.y < 0)
-				uv.y = 1 - uv.y;
-			#endif
 			
 			o.uv[0] = uv;
 			o.uv[1] = uv + float2(0.0, _MainTex_TexelSize.y * 1.0) * _BlurSize;
@@ -42,11 +37,6 @@
 			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 			
 			half2 uv = v.texcoord;
-			
-			#if UNITY_UV_STARTS_AT_TOP
-			if (_MainTex_TexelSize.y < 0)
-				uv.y = 1 - uv.y;
-			#endif
 			
 			o.uv[0] = uv;
 			o.uv[1] = uv + float2(_MainTex_TexelSize.x * 1.0, 0.0) * _BlurSize;

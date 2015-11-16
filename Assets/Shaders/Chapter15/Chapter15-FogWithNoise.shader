@@ -1,4 +1,4 @@
-﻿Shader "Unity Shaders Book/Chapter 13/Fog With Depth Texture" {
+﻿Shader "Unity Shaders Book/Chapter 15/Fog With Noise" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
 		_FogDensity ("Fog Density", Float) = 1.0
@@ -18,6 +18,7 @@
 		float4x4 _FrustumCornersRay;
 		
 		sampler2D _MainTex;
+		half4 _MainTex_TexelSize;
 		sampler2D _CameraDepthTexture;
 		half _FogDensity;
 		fixed4 _FogColor;
@@ -44,7 +45,7 @@
 			
 			#if UNITY_UV_STARTS_AT_TOP
 			if (_MainTex_TexelSize.y < 0)
-				uv.y = 1 - uv.y;
+				o.uv_depth.y = 1 - o.uv_depth.y;
 			#endif
 			
 			int index = 0;
@@ -57,6 +58,10 @@
 			} else {
 				index = 3;
 			}
+			#if UNITY_UV_STARTS_AT_TOP
+			if (_MainTex_TexelSize.y < 0)
+				index = 3 - index;
+			#endif
 			
 			o.interpolatedRay = _FrustumCornersRay[index];
 				 	 
@@ -64,7 +69,7 @@
 		}
 		
 		fixed4 frag(v2f i) : SV_Target {
-			float linearDepth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv));
+			float linearDepth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv_depth));
 			float3 worldPos = _WorldSpaceCameraPos + linearDepth * i.interpolatedRay.xyz;
 			
 			float2 speed = _Time.y * float2(_FogXSpeed, _FogYSpeed);

@@ -98,7 +98,7 @@
 				
 				o.pos = mul( UNITY_MATRIX_MVP, v.vertex);
 				o.uv = TRANSFORM_TEX (v.texcoord, _MainTex);
-				o.worldNormal  = mul(v.normal, (float3x3)_World2Object);
+				o.worldNormal  = UnityObjectToWorldNormal(v.normal);
 				o.worldPos = mul(_Object2World, v.vertex).xyz;
 				
 				TRANSFER_SHADOW(o);

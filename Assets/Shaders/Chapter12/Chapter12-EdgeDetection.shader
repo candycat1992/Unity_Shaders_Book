@@ -33,11 +33,6 @@
 				
 				half2 uv = v.texcoord;
 				
-				#if UNITY_UV_STARTS_AT_TOP
-				if (_MainTex_TexelSize.y < 0)
-					uv.y = 1 - uv.y;
-				#endif
-				
 				o.uv[0] = uv + _MainTex_TexelSize.xy * half2(-1, -1);
 				o.uv[1] = uv + _MainTex_TexelSize.xy * half2(0, -1);
 				o.uv[2] = uv + _MainTex_TexelSize.xy * half2(1, -1);

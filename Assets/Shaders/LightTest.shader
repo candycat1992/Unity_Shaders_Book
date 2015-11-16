@@ -41,7 +41,7 @@
                 
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
                	o.worldPosition = mul(_Object2World, v.vertex);
-                o.worldNormal =  mul(v.normal, (float3x3)_World2Object);
+                o.worldNormal =  UnityObjectToWorldNormal(v.normal);
 				o.worldLightDir = WorldSpaceLightDir(v.vertex);
 				o.worldViewDir = WorldSpaceViewDir(v.vertex);
 				o.vertexLighting = float3(0.0);
@@ -125,7 +125,7 @@
                 
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
                	o.worldPosition = mul(_Object2World, v.vertex);
-                o.worldNormal =  mul(v.normal, (float3x3)_World2Object);
+                o.worldNormal =  UnityObjectToWorldNormal(v.normal);
 				o.worldLightDir = WorldSpaceLightDir(v.vertex);
 				o.worldViewDir = WorldSpaceViewDir(v.vertex);
 				
