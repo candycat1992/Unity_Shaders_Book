@@ -1,6 +1,6 @@
 # 《Unity Shader入门精要》源代码
 
-本项目是书籍《Unity Shader入门精要》的配套源代码。最新版本请移步本项目的Github页面（https://github.com/candycat1992/Unity_Shaders_Book）。
+本项目是书籍《Unity Shader入门精要》的配套源代码。最新版本请移步本项目的Github页面（https://github.com/candycat1992/Unity_Shaders_Book ）。
 
 # Unity版本
 
