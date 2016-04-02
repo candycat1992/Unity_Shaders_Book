@@ -1,10 +1,20 @@
 # 《Unity Shader入门精要》源代码
 
-本项目是书籍《Unity Shader入门精要》的配套源代码。最新版本请移步本项目的Github页面（https://github.com/candycat1992/Unity_Shaders_Book）。
+本项目是书籍《Unity Shader入门精要》的配套源代码。最新版本请移步<a href="https://github.com/candycat1992/Unity_Shaders_Book" target="_blank">本项目的Github页面</a>。
+
+# 随书彩图
+
+我们提供了包含书中所有插图的彩色版插图集锦：<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_images.html" target="_blank">HTML</a>，PDF。
 
 # Unity版本
 
-我们**推荐使用Unity 5.0以上的版本来编译本项目**。如果你打算**使用更低版本的Unity，那么在学习本书时可能就会遇到一些问题**。例如 ，你发现可能会有些菜单或变量在你的Unity中找不到，可能就是因为Unity版本不同造成的。绝大多数情况下，本书的代码和指令仍然可以工作良好，但在一些特殊情况下，Unity可能会更改底层的实现细节，造成同样的代码会得到不一样的效果（例如，在非统一缩放时对法线进行变换）。还有一些问题是Unity提供的内置变量、宏和函数，例如我们在书中经常会使用UnityObjectToWorldNormal内置函数把法线从模型空间变换到世界空间中，但这个函数是在Unity 5中被引入的，因此如果读者使用的是Unity 5之前的版本就会报错。类似的情况还有和阴影相关的宏和变量等。 和Unity 4.x版本相比，Unity 5.x最大的变化之一就是很多以前只有在专业版才支持的功能，在免费版也同样提供了。因此，如果读者使用的是Unity 4.x免费版，可能会发现本书中的某些材质会出错。
+我们**推荐使用Unity 5.0以上的版本来编译本项目**。如果你打算**使用更低版本的Unity，那么在学习本书时可能就会遇到一些问题**：
+
+* 你可能发现会有些菜单或变量在你的Unity中找不到，这可能就是由于Unity版本不同造成的。绝大多数情况下，本书的代码和指令仍然可以工作良好，但在一些特殊情况下，Unity可能会更改底层的实现细节，造成同样的代码会得到不一样的效果（例如，在非统一缩放时对法线进行变换）。
+
+* 还有一些问题是Unity提供的内置变量、宏和函数，例如我们在书中经常会使用UnityObjectToWorldNormal内置函数把法线从模型空间变换到世界空间中，但这个函数是在Unity 5中才被引入的，因此如果读者使用的是Unity 5之前的版本就会报错。类似的情况还有和阴影相关的宏和变量等。
+
+* 和Unity 4.x版本相比，Unity 5.x最大的变化之一就是很多以前只有在专业版才支持的功能，在免费版也同样提供了。因此，如果读者使用的是Unity 4.x免费版，可能会发现本书中的某些材质会出错。
 
 # 使用说明
 
@@ -22,5 +32,5 @@
 
 # 读者反馈和勘误
 
-尽管我们在本书的编写过程中多次检查内容的正确性，但不可避免书中仍然会出现一些错误，欢迎读者批评指正。任何关于本书内容、源码等方面的问题，欢迎读者反映到本书源码所在的Github讨论页（https://github.com/candycat1992/Unity_Shaders_Book/issues），也可以发邮件（lelefeng1992@gmail.com）联系笔者。
+尽管我们在本书的编写过程中多次检查内容的正确性，但不可避免书中仍然会出现一些错误，欢迎读者批评指正。任何关于本书内容、源码等方面的问题，欢迎读者反映到本书源码所在的<a href="https://github.com/candycat1992/Unity_Shaders_Book/issues" target="_blank">Github讨论页</a>，也可以发邮件（lelefeng1992@gmail.com）联系笔者。
 
