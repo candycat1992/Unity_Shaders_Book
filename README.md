@@ -4,7 +4,7 @@
 
 # 随书彩图
 
-我们提供了包含书中所有插图的彩色版插图集锦：<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_images.html" target="_blank">HTML</a>，PDF。
+我们提供了包含书中所有插图的彩色版插图集锦：<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_images.html" target="_blank">HTML</a>，<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_images.pdf" target="_blank">PDF</a>。
 
 # Unity版本
 
