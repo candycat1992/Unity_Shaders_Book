@@ -10,7 +10,7 @@
 
 由于数学章是全书的重要基础，我们决定把第四章公开，来及时让读者获取最新的第四章数学章的内容：<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_chapter_4.pdf" target="_blank">PDF</a>。
 
-注：我们可能会根据读者勘误随时更新该文档，内容和页号可能会与读者手中的版本不同。
+**注意**：我们可能会根据读者勘误随时更新该文档，内容和页号可能会与读者手中的版本不同，实体书中的勘误会在每次重印时进行修正。
 
 # Unity版本
 
