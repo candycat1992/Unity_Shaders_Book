@@ -12,6 +12,10 @@
 
 **注意**：我们可能会根据读者勘误随时更新该文档，内容和页号可能会与读者手中的版本不同，实体书中的勘误会在每次重印时进行修正。
 
+# 勘误列表
+
+尽管我们在本书的编写过程中多次检查内容的正确性，但不可避免书中仍然会出现一些错误，欢迎读者批评指正。任何关于本书内容、源码等方面的问题，欢迎读者反映到本书源码所在的<a href="https://github.com/candycat1992/Unity_Shaders_Book/issues" target="_blank">Github讨论页</a>，也可以发邮件（lelefeng1992@gmail.com）联系笔者。关于目前已发现错误我们会及时在网上更新：<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_corrigenda.html" target="_blank">勘误列表</a>。
+
 # Unity版本
 
 我们**推荐使用Unity 5.0以上的版本来编译本项目**。如果你打算**使用更低版本的Unity，那么在学习本书时可能就会遇到一些问题**：
@@ -36,7 +40,4 @@
 
 除了上述文件夹外，源码中还包含了一些辅助文件夹，例如Assets/Editor文件夹中包含了一些需要在编辑器状态下运行的脚本，Assets/Prefabs文件夹下包含了各章使用的预设模型和其他常用预设模型等。
 
-# 读者反馈和勘误
-
-尽管我们在本书的编写过程中多次检查内容的正确性，但不可避免书中仍然会出现一些错误，欢迎读者批评指正。任何关于本书内容、源码等方面的问题，欢迎读者反映到本书源码所在的<a href="https://github.com/candycat1992/Unity_Shaders_Book/issues" target="_blank">Github讨论页</a>，也可以发邮件（lelefeng1992@gmail.com）联系笔者。
 
