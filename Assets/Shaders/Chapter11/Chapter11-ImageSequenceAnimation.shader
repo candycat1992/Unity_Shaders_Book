@@ -49,7 +49,7 @@
 			fixed4 frag (v2f i) : SV_Target {
 				float time = floor(_Time.y * _Speed);  
 				float row = floor(time / _HorizontalAmount);
-				float column = time - row * _VerticalAmount;
+				float column = time - row * _HorizontalAmount;
 				
 //				half2 uv = float2(i.uv.x /_HorizontalAmount, i.uv.y / _VerticalAmount);
 //				uv.x += column / _HorizontalAmount;
