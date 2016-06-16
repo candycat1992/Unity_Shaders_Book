@@ -59,7 +59,7 @@
 				
 				// Use the three vectors to rotate the quad
 				float3 centerOffs = v.vertex.xyz - center;
-				float3 localPos = center + rightDir * centerOffs.x + upDir * centerOffs.y + normalDir.z * centerOffs.z;
+				float3 localPos = center + rightDir * centerOffs.x + upDir * centerOffs.y + normalDir * centerOffs.z;
               
 				o.pos = mul(UNITY_MATRIX_MVP, float4(localPos, 1));
 				o.uv = TRANSFORM_TEX(v.texcoord,_MainTex);
