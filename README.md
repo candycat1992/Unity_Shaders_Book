@@ -2,6 +2,8 @@
 
 本项目是书籍《Unity Shader入门精要》的配套源代码。最新版本请移步<a href="https://github.com/candycat1992/Unity_Shaders_Book" target="_blank">本项目的Github页面</a>。
 
+纸质版书籍可在以下链接购买：* <a href="https://www.amazon.cn/Unity-Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81-%E5%86%AF%E4%B9%90%E4%B9%90/dp/B01G95GMU6/ref=sr_1_1?s=books&ie=UTF8&qid=1464607131&sr=1-1&keywords=unity+shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81" target="_blank">亚马逊</a>、<a href="http://product.dangdang.com/23972910.html" target="_blank">当当</a>、<a href="http://item.jd.com/11927199.html" target="_blank">京东</a>
+
 # 随书彩图
 
 我们提供了包含书中所有插图的彩色版插图集锦：<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_images.html" target="_blank">HTML</a>，<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_images.pdf" target="_blank">PDF</a>。
@@ -14,7 +16,11 @@
 
 # 读者反馈和勘误
 
-尽管我们在本书的编写过程中多次检查内容的正确性，但不可避免书中仍然会出现一些错误，欢迎读者批评指正。任何关于本书内容、源码等方面的问题，欢迎读者反映到本书源码所在的<a href="https://github.com/candycat1992/Unity_Shaders_Book/issues" target="_blank">Github讨论页</a>，也可以发邮件（lelefeng1992@gmail.com）联系笔者。关于目前**已发现的错误**我们会及时在网上更新：<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_corrigenda.html" target="_blank">勘误列表</a>。
+尽管我们在本书的编写过程中多次检查内容的正确性，但不可避免书中仍然会出现一些错误，欢迎读者批评指正。任何关于本书内容、源码等方面的问题，欢迎读者反映到本书源码所在的<a href="https://github.com/candycat1992/Unity_Shaders_Book/issues" target="_blank">Github讨论页</a>，也可以发邮件（lelefeng1992@gmail.com）联系笔者。
+
+关于目前**已发现的错误**我们会及时在网上更新：<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_corrigenda.html" target="_blank">勘误列表</a>。
+
+我们也维护了读者反馈的问题列表：<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_faq.html" target="_blank">FAQ</a>。
 
 # Unity版本
 
