@@ -2,7 +2,7 @@
 
 本项目是书籍《Unity Shader入门精要》的配套源代码。最新版本请移步<a href="https://github.com/candycat1992/Unity_Shaders_Book" target="_blank">本项目的Github页面</a>。
 
-纸质版书籍可在以下链接购买：* <a href="https://www.amazon.cn/Unity-Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81-%E5%86%AF%E4%B9%90%E4%B9%90/dp/B01G95GMU6/ref=sr_1_1?s=books&ie=UTF8&qid=1464607131&sr=1-1&keywords=unity+shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81" target="_blank">亚马逊</a>、<a href="http://product.dangdang.com/23972910.html" target="_blank">当当</a>、<a href="http://item.jd.com/11927199.html" target="_blank">京东</a>
+纸质版书籍可在以下链接购买：<a href="https://www.amazon.cn/Unity-Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81-%E5%86%AF%E4%B9%90%E4%B9%90/dp/B01G95GMU6/ref=sr_1_1?s=books&ie=UTF8&qid=1464607131&sr=1-1&keywords=unity+shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81" target="_blank">亚马逊</a>、<a href="http://product.dangdang.com/23972910.html" target="_blank">当当</a>、<a href="http://item.jd.com/11927199.html" target="_blank">京东</a>
 
 # 随书彩图
 
