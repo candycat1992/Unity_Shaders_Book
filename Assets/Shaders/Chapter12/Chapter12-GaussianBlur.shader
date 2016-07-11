@@ -53,8 +53,8 @@
 			fixed3 sum = tex2D(_MainTex, i.uv[0]).rgb * weight[0];
 			
 			for (int it = 1; it < 3; it++) {
-				sum += tex2D(_MainTex, i.uv[it]).rgb * weight[it];
-				sum += tex2D(_MainTex, i.uv[2*it]).rgb * weight[it];
+				sum += tex2D(_MainTex, i.uv[it*2-1]).rgb * weight[it];
+				sum += tex2D(_MainTex, i.uv[it*2]).rgb * weight[it];
 			}
 			
 			return fixed4(sum, 1.0);
