@@ -1,4 +1,4 @@
-﻿Shader "Unity Shaders Book/Chapter 12/Edge Detection" {
+Shader "Unity Shaders Book/Chapter 12/Edge Detection" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
 		_EdgeOnly ("Edge Only", Float) = 1.0
@@ -51,12 +51,12 @@
 			}
 			
 			half Sobel(v2f i) {
-				const half Gx[9] = {-1, -2, -1,
-										0,  0,  0,
-										1,  2,  1};
-				const half Gy[9] = {-1,  0,  1,
+				const half Gx[9] = {-1,  0,  1,
 										-2,  0,  2,
-										-1,  0,  1};		
+										-1,  0,  1};
+				const half Gy[9] = {-1, -2, -1,
+										0,  0,  0,
+										1,  2,  1};		
 				
 				half texColor;
 				half edgeX = 0;
