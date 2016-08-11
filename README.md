@@ -34,6 +34,10 @@
 
 * 和Unity 4.x版本相比，Unity 5.x最大的变化之一就是很多以前只有在专业版才支持的功能，在免费版也同样提供了。因此，如果读者使用的是Unity 4.x免费版，可能会发现本书中的某些材质会出错。
 
+## 升级Unity 5.4
+
+Unity 5.4对Shader部分进行了一些比较大的更新，最明显的一个特征是使用了unity_XXX来代替原有的XXX变换矩阵，例如_Object2World被替换成了unity_ObjectToWorld，_World2Object被替换成了unity_WorldToObject（均在UnityShaderVariables.cginc文件中被声明）。如果你打算直接使用Unity 5.4来编译本项目，Unity会自动更新相应的Shader，因此仍然不会报错。但在学习本书时，读者需要注意代码中一些由于自动更新造成的变化。
+
 # 使用说明
 
 本书源码的组织方式大多按资源类型和章节进行划分，主要包含了以下关键文件夹：
