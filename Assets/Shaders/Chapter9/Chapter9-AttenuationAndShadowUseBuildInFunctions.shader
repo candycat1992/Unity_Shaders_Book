@@ -47,7 +47,7 @@
 			 	
 			 	o.worldPos = mul(_Object2World, v.vertex).xyz;
 			 	
-			 	// Pass shadow coordinates to pixel shade
+			 	// Pass shadow coordinates to pixel shader
 			 	TRANSFER_SHADOW(o);
 			 	
 			 	return o;
@@ -117,7 +117,7 @@
 			 	
 			 	o.worldPos = mul(_Object2World, v.vertex).xyz;
 			 	
-			 	// Pass shadow coordinates to pixel shade
+			 	// Pass shadow coordinates to pixel shader
 			 	TRANSFER_SHADOW(o);
 			 	
 			 	return o;

@@ -35,7 +35,7 @@
 				// Transform the vertex from object space to projection space
 				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 				
-				// Transform the normal fram object space to world space
+				// Transform the normal from object space to world space
 				o.worldNormal = mul(v.normal, (float3x3)_World2Object);
 				// Transform the vertex from object spacet to world space
 				o.worldPos = mul(_Object2World, v.vertex).xyz;

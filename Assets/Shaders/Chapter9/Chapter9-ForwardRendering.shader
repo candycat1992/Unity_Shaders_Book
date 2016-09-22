@@ -127,10 +127,17 @@
 				#ifdef USING_DIRECTIONAL_LIGHT
 					fixed atten = 1.0;
 				#else
-					float3 lightCoord = mul(_LightMatrix0, float4(i.worldPos, 1)).xyz;
-					fixed atten = tex2D(_LightTexture0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
+					#if defined (POINT)
+				        float3 lightCoord = mul(_LightMatrix0, float4(i.worldPos, 1)).xyz;
+				        fixed atten = tex2D(_LightTexture0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
+				    #elif defined (SPOT)
+				        float4 lightCoord = mul(_LightMatrix0, float4(i.worldPos, 1));
+				        fixed atten = (lightCoord.z > 0) * tex2D(_LightTexture0, lightCoord.xy / lightCoord.w + 0.5).w * tex2D(_LightTextureB0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
+				    #else
+				        fixed atten = 1.0;
+				    #endif
 				#endif
-				
+
 				return fixed4((diffuse + specular) * atten, 1.0);
 			}
 			

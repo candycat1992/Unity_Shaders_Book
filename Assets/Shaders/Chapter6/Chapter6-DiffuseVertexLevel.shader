@@ -33,7 +33,7 @@
 				// Get ambient term
 				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
 				
-				// Transform the normal fram object space to world space
+				// Transform the normal from object space to world space
 				fixed3 worldNormal = normalize(mul(v.normal, (float3x3)_World2Object));
 				// Get the light direction in world space
 				fixed3 worldLight = normalize(_WorldSpaceLightPos0.xyz);
