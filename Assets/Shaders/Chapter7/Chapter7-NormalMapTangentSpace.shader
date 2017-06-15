@@ -89,12 +89,17 @@ Shader "Unity Shaders Book/Chapter 7/Normal Map In Tangent Space" {
 				fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);  
 				fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w; 
 
+				/*
 				float4x4 tangentToWorld = float4x4(worldTangent.x, worldBinormal.x, worldNormal.x, 0.0,
 												   worldTangent.y, worldBinormal.y, worldNormal.y, 0.0,
 												   worldTangent.z, worldBinormal.z, worldNormal.z, 0.0,
 												   0.0, 0.0, 0.0, 1.0);
 				// The matrix that transforms from world space to tangent space is inverse of tangentToWorld
 				float3x3 worldToTangent = inverse(tangentToWorld);
+				*/
+				
+				//wToT = the inverse of tToW = the transpose of tToW as long as tToW is an orthogonal matrix.
+				float3x3 worldToTangent = float3x3(worldTangent, worldBinormal, worldNormal);
 
 				// Transform the light and view dir from world space to tangent space
 				o.lightDir = mul(worldToTangent, WorldSpaceLightDir(v.vertex));
