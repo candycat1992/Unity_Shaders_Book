@@ -6,7 +6,7 @@ public class FogWithDepthTexture : PostEffectsBase {
 	public Shader fogShader;
 	private Material fogMaterial = null;
 
-	public Material material {  
+	public Material Material {  
 		get {
 			fogMaterial = CheckShaderAndCreateMaterial(fogShader, fogMaterial);
 			return fogMaterial;
@@ -14,7 +14,7 @@ public class FogWithDepthTexture : PostEffectsBase {
 	}
 
 	private Camera myCamera;
-	public Camera camera {
+	public Camera MyCamera {
 		get {
 			if (myCamera == null) {
 				myCamera = GetComponent<Camera>();
@@ -24,10 +24,10 @@ public class FogWithDepthTexture : PostEffectsBase {
 	}
 
 	private Transform myCameraTransform;
-	public Transform cameraTransform {
+	public Transform CameraTransform {
 		get {
 			if (myCameraTransform == null) {
-				myCameraTransform = camera.transform;
+				myCameraTransform = MyCamera.transform;
 			}
 
 			return myCameraTransform;
@@ -43,36 +43,36 @@ public class FogWithDepthTexture : PostEffectsBase {
 	public float fogEnd = 2.0f;
 
 	void OnEnable() {
-		camera.depthTextureMode |= DepthTextureMode.Depth;
+		MyCamera.depthTextureMode |= DepthTextureMode.Depth;
 	}
 	
 	void OnRenderImage (RenderTexture src, RenderTexture dest) {
-		if (material != null) {
+		if (Material != null) {
 			Matrix4x4 frustumCorners = Matrix4x4.identity;
 
-			float fov = camera.fieldOfView;
-			float near = camera.nearClipPlane;
-			float aspect = camera.aspect;
+			float fov = MyCamera.fieldOfView;
+			float near = MyCamera.nearClipPlane;
+			float aspect = MyCamera.aspect;
 
 			float halfHeight = near * Mathf.Tan(fov * 0.5f * Mathf.Deg2Rad);
-			Vector3 toRight = cameraTransform.right * halfHeight * aspect;
-			Vector3 toTop = cameraTransform.up * halfHeight;
+			Vector3 toRight = CameraTransform.right * halfHeight * aspect;
+			Vector3 toTop = CameraTransform.up * halfHeight;
 
-			Vector3 topLeft = cameraTransform.forward * near + toTop - toRight;
+			Vector3 topLeft = CameraTransform.forward * near + toTop - toRight;
 			float scale = topLeft.magnitude / near;
 
 			topLeft.Normalize();
 			topLeft *= scale;
 
-			Vector3 topRight = cameraTransform.forward * near + toRight + toTop;
+			Vector3 topRight = CameraTransform.forward * near + toRight + toTop;
 			topRight.Normalize();
 			topRight *= scale;
 
-			Vector3 bottomLeft = cameraTransform.forward * near - toTop - toRight;
+			Vector3 bottomLeft = CameraTransform.forward * near - toTop - toRight;
 			bottomLeft.Normalize();
 			bottomLeft *= scale;
 
-			Vector3 bottomRight = cameraTransform.forward * near + toRight - toTop;
+			Vector3 bottomRight = CameraTransform.forward * near + toRight - toTop;
 			bottomRight.Normalize();
 			bottomRight *= scale;
 
@@ -81,14 +81,14 @@ public class FogWithDepthTexture : PostEffectsBase {
 			frustumCorners.SetRow(2, topRight);
 			frustumCorners.SetRow(3, topLeft);
 
-			material.SetMatrix("_FrustumCornersRay", frustumCorners);
+			Material.SetMatrix("_FrustumCornersRay", frustumCorners);
 
-			material.SetFloat("_FogDensity", fogDensity);
-			material.SetColor("_FogColor", fogColor);
-			material.SetFloat("_FogStart", fogStart);
-			material.SetFloat("_FogEnd", fogEnd);
+			Material.SetFloat("_FogDensity", fogDensity);
+			Material.SetColor("_FogColor", fogColor);
+			Material.SetFloat("_FogStart", fogStart);
+			Material.SetFloat("_FogEnd", fogEnd);
 
-			Graphics.Blit (src, dest, material);
+			Graphics.Blit (src, dest, Material);
 		} else {
 			Graphics.Blit(src, dest);
 		}
