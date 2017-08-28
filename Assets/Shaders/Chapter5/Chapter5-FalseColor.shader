@@ -1,4 +1,6 @@
-﻿Shader "Unity Shaders Book/Chapter 5/False Color" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 5/False Color" {
 	SubShader {
 		Pass {
 			CGPROGRAM
@@ -15,7 +17,7 @@
 			
 			v2f vert(appdata_full v) {
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				
 				// Visualize normal
 				o.color = fixed4(v.normal * 0.5 + fixed3(0.5, 0.5, 0.5), 1.0);
