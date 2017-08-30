@@ -29,7 +29,7 @@
 		  
 		v2f vert(appdata_img v) {
 			v2f o;
-			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.pos = UnityObjectToClipPos(v.vertex);
 			
 			half2 uv = v.texcoord;
 			o.uv[0] = uv;

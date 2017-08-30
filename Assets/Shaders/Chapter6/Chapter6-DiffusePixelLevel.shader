@@ -28,10 +28,10 @@
 			v2f vert(a2v v) {
 				v2f o;
 				// Transform the vertex from object space to projection space
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 
 				// Transform the normal from object space to world space
-				o.worldNormal = mul(v.normal, (float3x3)_World2Object);
+				o.worldNormal = mul(v.normal, (float3x3)unity_WorldToObject);
 
 				return o;
 			}

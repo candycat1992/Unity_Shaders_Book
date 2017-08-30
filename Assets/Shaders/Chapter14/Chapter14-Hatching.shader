@@ -63,7 +63,7 @@ Shader "Unity Shaders Book/Chapter 14/Hatching" {
 			v2f vert(a2v v) {
 				v2f o;
 				
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				
 				o.uv = v.texcoord.xy * _TileFactor;
 				
@@ -97,7 +97,7 @@ Shader "Unity Shaders Book/Chapter 14/Hatching" {
 					o.hatchWeights1.z = 1.0 - o.hatchWeights1.y;
 				}
 				
-				o.worldPos = mul(_Object2World, v.vertex).xyz;
+				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 				
 				TRANSFER_SHADOW(o);
 				

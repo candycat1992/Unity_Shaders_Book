@@ -29,7 +29,7 @@
 			v2f vert(a2v v) {
 			 	v2f o;
 			 	// Transform the vertex from object space to projection space
-			 	o.position = mul(UNITY_MATRIX_MVP, v.vertex);
+			 	o.position = UnityObjectToClipPos(v.vertex);
 
 			 	o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 			 	

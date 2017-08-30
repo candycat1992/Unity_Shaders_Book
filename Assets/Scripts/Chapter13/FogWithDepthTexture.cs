@@ -14,7 +14,7 @@ public class FogWithDepthTexture : PostEffectsBase {
 	}
 
 	private Camera myCamera;
-	public Camera camera {
+	public new Camera camera {
 		get {
 			if (myCamera == null) {
 				myCamera = GetComponent<Camera>();

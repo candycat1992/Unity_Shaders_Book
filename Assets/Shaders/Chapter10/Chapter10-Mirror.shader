@@ -10,6 +10,8 @@
 			
 			#pragma vertex vert
 			#pragma fragment frag
+
+			#include "UnityCG.cginc"
 			
 			sampler2D _MainTex;
 			
@@ -25,7 +27,7 @@
 			
 			v2f vert(a2v v) {
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				
 				o.uv = v.texcoord;
 				// Mirror needs to filp x
