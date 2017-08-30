@@ -38,7 +38,7 @@
 			v2f vert (a2v v) {
 				v2f o;
 				
-				float4 pos = mul(UNITY_MATRIX_MV, v.vertex); 
+				float4 pos = float4(UnityObjectToViewPos(v.vertex), 1.0);
 				float3 normal = mul((float3x3)UNITY_MATRIX_IT_MV, v.normal);  
 				normal.z = -0.5;
 				pos = pos + float4(normalize(normal), 0) * _Outline;
