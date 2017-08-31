@@ -36,9 +36,33 @@
 
 * 和Unity 4.x版本相比，Unity 5.x最大的变化之一就是很多以前只有在专业版才支持的功能，在免费版也同样提供了。因此，如果读者使用的是Unity 4.x免费版，可能会发现本书中的某些材质会出错。
 
-## 升级Unity 5.4
+## Unity 5.3及其以下Unity 5.x版本
 
-Unity 5.4对Shader部分进行了一些比较大的更新，最明显的一个特征是使用了unity_XXX来代替原有的XXX变换矩阵，例如_Object2World被替换成了unity_ObjectToWorld，_World2Object被替换成了unity_WorldToObject（均在UnityShaderVariables.cginc文件中被声明）。如果你打算直接使用Unity 5.4来编译本项目，Unity会自动更新相应的Shader，因此仍然不会报错。但在学习本书时，读者需要注意代码中一些由于自动更新造成的变化。
+**分支链接**：[master](https://github.com/candycat1992/Unity_Shaders_Book/tree/master)
+
+在本书编写时，我们使用的版本是Unity 5.3，因此使用这些Unity版本的读者请使用本项目[master](https://github.com/candycat1992/Unity_Shaders_Book/tree/master)分支的相关代码。
+
+## Unity 5.4及其以上Unity 5.x版本
+
+**分支链接**：[unity_5_4](https://github.com/candycat1992/Unity_Shaders_Book/tree/unity_5_4)
+
+Unity 5.4对Shader部分进行了一些比较大的更新，比较明显的变化有：
+
+* 使用了unity_XXX来代替原有的XXX变换矩阵，例如_Object2World被替换成了unity_ObjectToWorld，_World2Object被替换成了unity_WorldToObject（均在UnityShaderVariables.cginc文件中被声明），_LightMatrix0被替换成了unity_WorldToLight（在AutoLight.cginc文件中被声明）。
+
+* 使用了一些内置函数来代替某些运算，例如mul(UNITY_MATRIX_MVP,*)相关计算被替换成了UnityObjectToClipPos(*)。
+
+在学习本书时，读者需要注意代码中一些由于更新造成的变化。
+
+## 截止到目前的Unity 2017版本
+
+**分支链接**：[unity_2017_1](https://github.com/candycat1992/Unity_Shaders_Book/tree/unity_2017_1)
+
+Unity 2017对Shader部分没有较大更新，我们主要做了以下更改来消除升级造成的Shader Warning信息：
+
+* 使用内置的UnityObjectToViewPos(*)函数来代替mul(UNITY_MATRIX_MV, *)对顶点进行变换。
+
+在学习本书时，读者需要注意代码中一些由于更新造成的变化。
 
 # 使用说明
 
