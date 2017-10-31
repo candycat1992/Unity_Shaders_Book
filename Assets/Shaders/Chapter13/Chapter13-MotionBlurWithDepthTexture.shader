@@ -39,6 +39,9 @@
 		fixed4 frag(v2f i) : SV_Target {
 			// Get the depth buffer value at this pixel.
 			float d = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv_depth);
+			#if defined(UNITY_REVERSED_Z)
+				d = 1.0 - d;
+			#endif
 			// H is the viewport position at this pixel in the range -1 to 1.
 			float4 H = float4(i.uv.x * 2 - 1, i.uv.y * 2 - 1, d * 2 - 1, 1);
 			// Transform by the view-projection inverse.
