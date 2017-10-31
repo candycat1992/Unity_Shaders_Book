@@ -54,6 +54,29 @@ Unity 5.4对Shader部分进行了一些比较大的更新，比较明显的变�
 
 在学习本书时，读者需要注意代码中一些由于更新造成的变化。
 
+### 升级Unity 5.5
+
+从Unity 5.5开始，Unity在某些平台（如DX11、DX12、PS4、Xbox One、Metal）等平台对深度缓存进行了反转操作，使得在近平面处的深度值为1，而远平面处为0。这样做的原因主要是为了更加充分得利用浮点深度缓存，具体原因可以参见NVIDIA的相关博客[Depth Precision Visualized](https://developer.nvidia.com/content/depth-precision-visualized)。Unity在[Upgrading to Unity 5.5](https://docs.unity3d.com/Manual/UpgradeGuide55.html)和[Platform-specific rendering differences](https://docs.unity3d.com/Manual/SL-PlatformDifferences.html)文档中对此进行了说明。
+
+在本书代码中，我们在第13章用到了深度纹理，其中对于使用了Linear01Depth、LinearEyeDepth等Unity内置函数的部分不受此变化影响，但我们在Chapter13-MotionBlurWithDepthTexture中直接访问了深度值来计算世界空间下的坐标：
+
+
+```
+// Get the depth buffer value at this pixel.
+float d = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv_depth);
+```
+
+这使得在反转深度缓存的情况下会得到错误的结果。为了解决这个问题，我们可以使用内置宏来判断深度是否已被反转，并据此来做出相应的计算。变化后的代码如下：
+
+
+```
+// Get the depth buffer value at this pixel.
+float d = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv_depth);
+#if defined(UNITY_REVERSED_Z)
+	d = 1.0 - d;
+#endif
+```
+
 ## 截止到目前的Unity 2017版本
 
 **分支链接**：[unity_2017_1](https://github.com/candycat1992/Unity_Shaders_Book/tree/unity_2017_1)
