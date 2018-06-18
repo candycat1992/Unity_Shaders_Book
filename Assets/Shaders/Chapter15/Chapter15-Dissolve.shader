@@ -57,7 +57,7 @@
 			
 			v2f vert(a2v v) {
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				
 				o.uvMainTex = TRANSFORM_TEX(v.texcoord, _MainTex);
 				o.uvBumpMap = TRANSFORM_TEX(v.texcoord, _BumpMap);
@@ -66,7 +66,7 @@
 				TANGENT_SPACE_ROTATION;
   				o.lightDir = mul(rotation, ObjSpaceLightDir(v.vertex)).xyz;
   				
-  				o.worldPos = mul(_Object2World, v.vertex).xyz;
+  				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
   				
   				TRANSFER_SHADOW(o);
 				
