@@ -1,0 +1,13 @@
+
+=== Fri Dec 21 11:35:48 2018
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were added:
+  com.unity.collab-proxy@1.2.15
+The following packages were updated:
+  com.unity.ads from version 2.0.8 to 2.3.1
+  com.unity.analytics from version 2.0.16 to 3.2.2
+  com.unity.package-manager-ui from version 1.9.11 to 2.0.3
+  com.unity.textmeshpro from version 1.2.4 to 1.3.0

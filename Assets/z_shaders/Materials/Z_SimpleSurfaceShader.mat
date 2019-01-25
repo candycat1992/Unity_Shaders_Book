@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Z_SimpleSurfaceShader
+  m_Shader: {fileID: 4800000, guid: 616ab6e2f32b7e14e830f593c7982a0f, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 62ea63551f14847d18f8f258f74e14d8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cube:
+        m_Texture: {fileID: 8900000, guid: 5e6d2cc25beb34a998784c5dc7e8fe9c, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 2800000, guid: a52d08fa5f43c40648bbd8a6402c8256, type: 3}
+        m_Scale: {x: 10, y: 10}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: d938a66d993e948deaed0109b1217675, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Amount: 0.001
+    - _Offset: 0
+    - _RimPower: 4.61
+    - _RimStrength: 4.75
+    - _ScreenSpaceDetail: 0
+    - _YOffset: -0.41
+    - _YScale: 6.94
+    - _ZScale: 3.46
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorTint: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
+    - _FogColor: {r: 0, g: 1, b: 0.3833332, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}

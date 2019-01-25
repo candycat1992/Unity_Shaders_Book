@@ -1,4 +1,6 @@
-﻿Shader "Unity Shaders Book/Chapter 8/Blend Operations 0" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 8/Blend Operations 0" {
 	Properties {
 		_Color ("Color Tint", Color) = (1, 1, 1, 1)
 		_MainTex ("Main Tex", 2D) = "white" {}
@@ -39,7 +41,7 @@
 			
 			v2f vert(a2v v) {
 			 	v2f o;
-			 	o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			 	o.pos = UnityObjectToClipPos(v.vertex);
 
 			 	o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 			 	

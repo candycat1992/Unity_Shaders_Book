@@ -1,4 +1,6 @@
-﻿Shader "Unity Shaders Book/Chapter 12/Motion Blur" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 12/Motion Blur" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
 		_BlurAmount ("Blur Amount", Float) = 1.0
@@ -19,7 +21,7 @@
 		v2f vert(appdata_img v) {
 			v2f o;
 			
-			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.pos = UnityObjectToClipPos(v.vertex);
 			
 			o.uv = v.texcoord;
 					 

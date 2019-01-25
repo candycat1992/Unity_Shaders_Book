@@ -1,4 +1,8 @@
-﻿Shader "Unity Shaders Book/Chapter 6/Blinn-Phong" {
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 6/Blinn-Phong" {
 	Properties {
 		_Diffuse ("Diffuse", Color) = (1, 1, 1, 1)
 		_Specular ("Specular", Color) = (1, 1, 1, 1)
@@ -33,13 +37,13 @@
 			v2f vert(a2v v) {
 				v2f o;
 				// Transform the vertex from object space to projection space
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				
 				// Transform the normal from object space to world space
-				o.worldNormal = mul(v.normal, (float3x3)_World2Object);
+				o.worldNormal = mul(v.normal, (float3x3)unity_WorldToObject);
 				
 				// Transform the vertex from object spacet to world space
-				o.worldPos = mul(_Object2World, v.vertex).xyz;
+				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 				
 				return o;
 			}

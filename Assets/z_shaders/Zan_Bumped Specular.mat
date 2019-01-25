@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Zan_Bumped Specular
+  m_Shader: {fileID: 4800000, guid: fbeeb75f1a4f41e4384d73b5cb4dffbe, type: 3}
+  m_ShaderKeywords: _OVERLAY_ADD
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 62ea63551f14847d18f8f258f74e14d8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: d938a66d993e948deaed0109b1217675, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Blend: 7
+    - _Cutoff: 0.62
+    - _Gloss: 0.86
+    - _Invert: 0
+    - _Overlay: 1
+    - _RimPower: 8
+    - _RimStrength: 1
+    - _Rimstrong: 1
+    - _Shininess: 0.51
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 1, g: 0.6439791, b: 0, a: 1}
