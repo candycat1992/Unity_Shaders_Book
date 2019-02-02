@@ -12,6 +12,10 @@
 
 我们提供了包含书中所有插图的彩色版插图集锦：<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_images.html" target="_blank">HTML</a>，<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_images.pdf" target="_blank">PDF</a>。
 
+# 2019年新增：改版后的第十八章
+
+当年乐观地以为自己有时间写第二版，是我太年轻了…… 第一版由于我能力有限的确有很多问题，感谢大家一直以来的支持。当年在我有时间的时候曾经花了一些时间重写了第18章，本来是想要放到第二版里的，但是目前第二版遥遥无期，索性直接把改版后的第18章直接放出来，希望能让读者有新的收获：<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_chapter_18.pdf" target="_blank">改版后的第18章</a>。
+
 # 第四章勘误
 
 由于数学章是全书的重要基础，我们决定把第四章公开，来及时让读者获取最新的第四章数学章的内容：<a href="http://candycat1992.github.io/unity_shaders_book/unity_shaders_book_chapter_4.pdf" target="_blank">PDF</a>。
