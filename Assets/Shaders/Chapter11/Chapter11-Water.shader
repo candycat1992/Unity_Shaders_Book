@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Unity Shaders Book/Chapter 11/Water" {
 	Properties {
 		_MainTex ("Main Tex", 2D) = "white" {}
@@ -48,7 +50,7 @@ Shader "Unity Shaders Book/Chapter 11/Water" {
 				float4 offset;
 				offset.yzw = float3(0.0, 0.0, 0.0);
 				offset.x = sin(_Frequency * _Time.y + v.vertex.x * _InvWaveLength + v.vertex.y * _InvWaveLength + v.vertex.z * _InvWaveLength) * _Magnitude;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex + offset);
+				o.pos = UnityObjectToClipPos(v.vertex + offset);
 				
 				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 				o.uv +=  float2(0.0, _Time.y * _Speed);

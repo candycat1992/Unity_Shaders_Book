@@ -1,4 +1,6 @@
-﻿Shader "Unity Shaders Book/Chapter 10/Mirror" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 10/Mirror" {
 	Properties {
 		_MainTex ("Main Tex", 2D) = "white" {}
 	}
@@ -25,7 +27,7 @@
 			
 			v2f vert(a2v v) {
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				
 				o.uv = v.texcoord;
 				// Mirror needs to filp x

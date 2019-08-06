@@ -1,4 +1,7 @@
-﻿Shader "Unity Shaders Book/Chapter 15/Dissolve" {
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 15/Dissolve" {
 	Properties {
 		_BurnAmount ("Burn Amount", Range(0.0, 1.0)) = 0.0
 		_LineWidth("Burn Line Width", Range(0.0, 0.2)) = 0.1
@@ -57,7 +60,7 @@
 			
 			v2f vert(a2v v) {
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				
 				o.uvMainTex = TRANSFORM_TEX(v.texcoord, _MainTex);
 				o.uvBumpMap = TRANSFORM_TEX(v.texcoord, _BumpMap);
@@ -66,7 +69,7 @@
 				TANGENT_SPACE_ROTATION;
   				o.lightDir = mul(rotation, ObjSpaceLightDir(v.vertex)).xyz;
   				
-  				o.worldPos = mul(_Object2World, v.vertex).xyz;
+  				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
   				
   				TRANSFER_SHADOW(o);
 				

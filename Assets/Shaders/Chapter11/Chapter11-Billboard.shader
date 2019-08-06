@@ -1,4 +1,7 @@
-﻿Shader "Unity Shaders Book/Chapter 11/Billboard" {
+﻿// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 11/Billboard" {
 	Properties {
 		_MainTex ("Main Tex", 2D) = "white" {}
 		_Color ("Color Tint", Color) = (1, 1, 1, 1)
@@ -42,7 +45,7 @@
 				
 				// Suppose the center in object space is fixed
 				float3 center = float3(0, 0, 0);
-				float3 viewer = mul(_World2Object,float4(_WorldSpaceCameraPos, 1));
+				float3 viewer = mul(unity_WorldToObject,float4(_WorldSpaceCameraPos, 1));
 				
 				float3 normalDir = viewer - center;
 				// If _VerticalBillboarding equals 1, we use the desired view dir as the normal dir
@@ -61,7 +64,7 @@
 				float3 centerOffs = v.vertex.xyz - center;
 				float3 localPos = center + rightDir * centerOffs.x + upDir * centerOffs.y + normalDir * centerOffs.z;
               
-				o.pos = mul(UNITY_MATRIX_MVP, float4(localPos, 1));
+				o.pos = UnityObjectToClipPos(float4(localPos, 1));
 				o.uv = TRANSFORM_TEX(v.texcoord,_MainTex);
 
 				return o;
