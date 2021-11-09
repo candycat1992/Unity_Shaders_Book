@@ -1,15 +1,20 @@
-﻿//	逐顶点光照
-//	对于细分程度较高的模型，逐顶点光照已经可以得到比较好的光照效果了
-//	但是对于一些细分程度较低的模型，就会出现一些视觉问题，特别是背光面和向光面的交界处容易出现锯齿
-//	为了解决这些问题，可以使用逐像素的漫反射光照
+﻿//	使用逐顶点的方法得到的高光效果有比较大的问题，我们可以看到高光部分明显不平滑。
+//	这主要是因为，高光反射部分的计算是非线性的，而在顶点着色器中计算光照再进行插值的过程是线性的，
+//	破坏了原计算的非线性关系，就会出现较大的视觉问题。因此，我们就需要使用逐像素的方法来计算高光反射
 
 
-Shader "Unlit/Chapter6_DiffuseVertexLevel"
+Shader "Unlit/Chapter6_SpecularVertexLevel"
 {
 	Properties
 	{
 		//	定义一个Color属性，控制漫反射颜色
 		_Diffuse("Diffuse", Color) = (1,1,1,1)
+
+		//	高光颜色
+		_Specular("Specular", Color) = (1,1,1,1)
+
+		//	高光区域大小
+		_Gloss("Gloss", Range(8.0, 256)) = 20
 	}
 
 	SubShader
@@ -40,6 +45,8 @@ Shader "Unlit/Chapter6_DiffuseVertexLevel"
 			};
 
 			fixed4 _Diffuse;
+			fixed4 _Specular;
+			float _Gloss;
 
 			//	转换成 [0, 1]
 			float my_saturate(float x)
@@ -71,8 +78,35 @@ Shader "Unlit/Chapter6_DiffuseVertexLevel"
 				//	漫反射 = 光照颜色值*漫反射*光照强度
 				fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * lightPower;
 
-				//	最终颜色值 = 环境光颜色 + 漫反射颜色
-				o.color = ambient + diffuse;
+
+				//////比逐顶点漫反射多了一个高光计算/////
+
+				//	计算世界空间下reflect方向
+				//	计算入射光线方向关于表面法线的反射方向reflectDir
+				//	由于reflect函数的入射方向要求是由光源指向交点处，因此要对worldLightDir取反后再传给reflect函数
+				fixed3 reflectDir = normalize(reflect(-worldLightDir, worldNormal));
+
+				//	计算世界空间下视角方向 = (世界空间下相机坐标 - 顶点世界空间下坐标)
+				
+				//	把顶点位置从模型空间坐标转换到世界空间下
+				float4 worldPos = mul(unity_ObjectToWorld, v.vertex);
+
+				//	通过内置变量_WorldSpaceCameraPos获取世界空间中相机位置
+				//	两者相减即可得到世界空间下的视角方向
+				fixed3 viewDir = normalize(_WorldSpaceCameraPos.xyz - worldPos.xyz);
+
+
+				//	计算高光强度
+				float specularPower = pow(my_saturate(dot(reflectDir, viewDir)), _Gloss);
+
+				//	计算高光
+				fixed3 specular = _LightColor0.rgb * _Specular.rgb * specularPower;
+
+				/////比逐顶点漫反射多了一个高光计算/////
+
+
+				//	最终颜色值 = 环境光颜色 + 漫反射颜色 + 高光
+				o.color = ambient + diffuse + specular;
 
 				return o;
 			}
