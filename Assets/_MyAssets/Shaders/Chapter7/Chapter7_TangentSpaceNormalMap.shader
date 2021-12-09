@@ -38,7 +38,7 @@
 			{
 				float4 pos : SV_POSITION;
 				float4 uv : TEXCOORD0;
-				float3 lightDir:TESSFACTOR1;
+				float3 lightDir:TEXCOORD1;
 				float3 viewDir:TEXCOORD2;
 
 			};
