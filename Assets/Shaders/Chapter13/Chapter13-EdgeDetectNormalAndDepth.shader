@@ -1,4 +1,6 @@
-﻿Shader "Unity Shaders Book/Chapter 13/Edge Detection Normals And Depth" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 13/Edge Detection Normals And Depth" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
 		_EdgeOnly ("Edge Only", Float) = 1.0
@@ -29,7 +31,7 @@
 		  
 		v2f vert(appdata_img v) {
 			v2f o;
-			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.pos = UnityObjectToClipPos(v.vertex);
 			
 			half2 uv = v.texcoord;
 			o.uv[0] = uv;

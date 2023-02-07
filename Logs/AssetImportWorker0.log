@@ -1,0 +1,187 @@
+Using pre-set license
+Built from '2020.3/china_unity/release' branch; Version is '2020.3.33f1c2 (8e753a737e7b) revision 9336122'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16236 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+D:\unity hub\2020.3.33f1c2\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Unity Projects/Unity_Shaders_Book
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+53006
+Successfully changed project path to: D:/Unity Projects/Unity_Shaders_Book
+D:/Unity Projects/Unity_Shaders_Book
+Using Asset Import Pipeline V2.
+AS: AutoStreaming module initializing.Refreshing native plugins compatible for Editor in 27.96 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.33f1c2 (8e753a737e7b)
+[Subsystems] Discovering subsystems at path D:/unity hub/2020.3.33f1c2/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity Projects/Unity_Shaders_Book/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2560)
+    Vendor:   
+    VRAM:     6023 MB
+    Driver:   30.0.15.1236
+Initialize mono
+Mono path[0] = 'D:/unity hub/2020.3.33f1c2/Editor/Data/Managed'
+Mono path[1] = 'D:/unity hub/2020.3.33f1c2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/unity hub/2020.3.33f1c2/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56320
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/unity hub/2020.3.33f1c2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001106 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 27.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.457 seconds
+Domain Reload Profiling:
+	ReloadAssembly (458ms)
+		BeginReloadAssembly (60ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (346ms)
+			LoadAssemblies (59ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (106ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (134ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (27ms)
+				BeforeProcessingInitializeOnLoad (14ms)
+				ProcessInitializeOnLoadAttributes (67ms)
+				ProcessInitializeOnLoadMethodAttributes (22ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002440 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\Unity_Shaders_Book\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.768 seconds
+Domain Reload Profiling:
+	ReloadAssembly (768ms)
+		BeginReloadAssembly (123ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (601ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (193ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (245ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (169ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1585 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 86.4 MB.
+System memory in use after: 86.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2026.
+Total: 11.008100 ms (FindLiveObjects: 0.154700 ms CreateObjectMapping: 0.065500 ms MarkObjects: 10.647200 ms  DeleteObjects: 0.139400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Shaders/Common
+  artifactKey: Guid(2dddbe1366f3144b4ba0740de38acf0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Common using Guid(2dddbe1366f3144b4ba0740de38acf0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11cc423aef65fd47aa6ea8555fefbaca') in 0.005405 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.196423 seconds.
+  path: Assets/Shaders/Chapter7/Chapter7-NormalMapWorldSpace.shader
+  artifactKey: Guid(01074012f14cf471cae8b56108368075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Chapter7/Chapter7-NormalMapWorldSpace.shader using Guid(01074012f14cf471cae8b56108368075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c50ac2af641507405df6e76e1fe41fe2') in 0.033081 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.623748 seconds.
+  path: Assets/Shaders/Chapter7/Chapter7-NormalMapWorldSpace.shader
+  artifactKey: Guid(01074012f14cf471cae8b56108368075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Chapter7/Chapter7-NormalMapWorldSpace.shader using Guid(01074012f14cf471cae8b56108368075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6e65a8b7ec7a6a90c26d59e7e70563d') in 0.002709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.397372 seconds.
+  path: Assets/Shaders/Common/BumpedDiffuse.shader
+  artifactKey: Guid(49aacf21ebac04f4da838b6fc982da24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Common/BumpedDiffuse.shader using Guid(49aacf21ebac04f4da838b6fc982da24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b8d9f9dc3ec2c23b481443bdebe8d09') in 0.002407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 62.405113 seconds.
+  path: Assets/Shaders/Common/BumpedDiffuse.shader
+  artifactKey: Guid(49aacf21ebac04f4da838b6fc982da24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Common/BumpedDiffuse.shader using Guid(49aacf21ebac04f4da838b6fc982da24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '828927a4877a0731c3071b8a5a0322ad') in 0.002437 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.141611 seconds.
+  path: Assets/Shaders/Common/BumpedDiffuse.shader
+  artifactKey: Guid(49aacf21ebac04f4da838b6fc982da24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Common/BumpedDiffuse.shader using Guid(49aacf21ebac04f4da838b6fc982da24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b359a61820ba3f464f4e8d798827ba1e') in 0.002637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.911546 seconds.
+  path: Assets/Shaders/Common/BumpedDiffuse.shader
+  artifactKey: Guid(49aacf21ebac04f4da838b6fc982da24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Common/BumpedDiffuse.shader using Guid(49aacf21ebac04f4da838b6fc982da24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17ddb0cb7d6d3f5223b19fe3e82eb602') in 0.002484 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.892690 seconds.
+  path: Assets/Shaders/Common/BumpedSpecular.shader
+  artifactKey: Guid(734b314e4b54b4c77925b9d6d0724c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Common/BumpedSpecular.shader using Guid(734b314e4b54b4c77925b9d6d0724c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db79beb049ee7ef1e6ac8759f96d7a5b') in 0.002346 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 67.630036 seconds.
+  path: Assets/Shaders/Common/BumpedSpecular.shader
+  artifactKey: Guid(734b314e4b54b4c77925b9d6d0724c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders/Common/BumpedSpecular.shader using Guid(734b314e4b54b4c77925b9d6d0724c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40f924e1c63d62fa60e2bcbe777648dd') in 0.002410 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

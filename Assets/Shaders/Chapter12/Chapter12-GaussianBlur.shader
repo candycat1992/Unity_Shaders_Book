@@ -1,4 +1,6 @@
-﻿Shader "Unity Shaders Book/Chapter 12/Gaussian Blur" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 12/Gaussian Blur" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
 		_BlurSize ("Blur Size", Float) = 1.0
@@ -19,7 +21,7 @@
 		  
 		v2f vertBlurVertical(appdata_img v) {
 			v2f o;
-			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.pos = UnityObjectToClipPos(v.vertex);
 			
 			half2 uv = v.texcoord;
 			
@@ -34,7 +36,7 @@
 		
 		v2f vertBlurHorizontal(appdata_img v) {
 			v2f o;
-			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.pos = UnityObjectToClipPos(v.vertex);
 			
 			half2 uv = v.texcoord;
 			
