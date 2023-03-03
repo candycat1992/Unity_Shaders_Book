@@ -1,4 +1,6 @@
-﻿Shader "Unity Shaders Book/Chapter 11/Scrolling Background" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 11/Scrolling Background" {
 	Properties {
 		_MainTex ("Base Layer (RGB)", 2D) = "white" {}
 		_DetailTex ("2nd Layer (RGB)", 2D) = "white" {}
@@ -39,7 +41,7 @@
 			
 			v2f vert (a2v v) {
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				
 				o.uv.xy = TRANSFORM_TEX(v.texcoord, _MainTex) + frac(float2(_ScrollX, 0.0) * _Time.y);
 				o.uv.zw = TRANSFORM_TEX(v.texcoord, _DetailTex) + frac(float2(_Scroll2X, 0.0) * _Time.y);

@@ -1,4 +1,7 @@
-﻿Shader "Unity Shaders Book/Chapter 15/Water Wave" {
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unity Shaders Book/Chapter 15/Water Wave" {
 	Properties {
 		_Color ("Main Color", Color) = (0, 0.15, 0.115, 1)
 		_MainTex ("Base (RGB)", 2D) = "white" {}
@@ -59,14 +62,14 @@
 			
 			v2f vert(a2v v) {
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				
 				o.scrPos = ComputeGrabScreenPos(o.pos);
 				
 				o.uv.xy = TRANSFORM_TEX(v.texcoord, _MainTex);
 				o.uv.zw = TRANSFORM_TEX(v.texcoord, _WaveMap);
 				
-				float3 worldPos = mul(_Object2World, v.vertex).xyz;  
+				float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;  
 				fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);  
 				fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);  
 				fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w; 
